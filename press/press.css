@@ -1,0 +1,395 @@
+.press-header-actions {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.langs {
+  display: flex;
+  gap: 4px;
+}
+
+.langs button {
+  min-height: 32px;
+  padding: 7px 9px;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  font: inherit;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.langs button:hover,
+.langs button:focus-visible {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.langs button[aria-pressed="true"] {
+  color: var(--white);
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.press-shell {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max);
+  margin: 0 auto;
+  border-inline: 1px solid var(--line);
+}
+
+.press-hero {
+  min-height: calc(78svh - 72px);
+  padding: clamp(30px, 4vw, 58px) var(--pad);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ink);
+}
+
+.press-hero-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .2em;
+}
+
+.press-hero h1 {
+  position: relative;
+  z-index: 1;
+  margin: 7vh 0;
+  font-size: clamp(5.2rem, 15vw, 14rem);
+  font-weight: 900;
+  line-height: .67;
+  letter-spacing: -.09em;
+}
+
+.press-hero h1::before {
+  content: "R";
+  position: absolute;
+  z-index: -1;
+  right: -.03em;
+  top: 48%;
+  color: rgba(17, 19, 24, .045);
+  font-size: 1.6em;
+  line-height: .5;
+}
+
+.press-hero h1 span,
+.press-hero h1 strong {
+  display: block;
+}
+
+.press-hero h1 strong {
+  margin-left: .21em;
+  color: var(--red);
+}
+
+.press-hero-foot {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) auto;
+  align-items: end;
+  gap: 50px;
+}
+
+.press-hero-foot > p {
+  max-width: 36em;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(.9rem, 1.3vw, 1.1rem);
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: .02em;
+  white-space: pre-line;
+}
+
+.press-hero-foot > div {
+  text-align: right;
+}
+
+.press-hero-foot strong {
+  display: block;
+  color: var(--blue);
+  font-size: clamp(2.8rem, 6vw, 6rem);
+  line-height: .8;
+  letter-spacing: -.08em;
+}
+
+.press-hero-foot span {
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+
+.press-document {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: clamp(72px, 10vw, 140px) var(--pad) clamp(100px, 13vw, 180px);
+}
+
+.document-title {
+  margin: 0 0 56px;
+  padding: 16px 0;
+  color: var(--muted);
+  border-block: 1px solid var(--line);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.lang-pane[hidden] {
+  display: none;
+}
+
+.lang-pane {
+  color: #35373d;
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+  letter-spacing: .015em;
+}
+
+.lang-pane p {
+  margin: 0 0 1.25em;
+}
+
+.lang-pane a {
+  color: var(--red);
+  text-underline-offset: 4px;
+}
+
+.lang-pane strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.lang-pane em {
+  color: var(--muted);
+}
+
+.lang-pane h2 {
+  margin: clamp(78px, 10vw, 120px) 0 28px;
+  padding-top: 22px;
+  color: var(--ink);
+  border-top: 4px solid var(--ink);
+  font-size: clamp(1.75rem, 4vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+
+.lang-pane h2::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 5px;
+  margin: 0 13px .2em 0;
+  background: var(--red);
+}
+
+.lang-pane h3 {
+  margin: 48px 0 14px;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 900;
+  line-height: 1.45;
+  letter-spacing: .01em;
+}
+
+.lang-pane h4 {
+  margin: 32px 0 10px;
+  color: var(--ink);
+  font-size: .9rem;
+}
+
+.lang-pane table {
+  width: 100%;
+  margin: 28px 0 38px;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.lang-pane th {
+  padding: 12px 13px;
+  color: var(--white);
+  background: var(--ink);
+  border-right: 1px solid rgba(248, 246, 239, .2);
+  text-align: left;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.lang-pane td {
+  padding: 12px 13px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.lang-pane tbody tr:hover td {
+  background: rgba(17, 19, 24, .025);
+}
+
+.lang-pane blockquote {
+  margin: 30px 0;
+  padding: 24px 28px;
+  color: var(--ink);
+  background: rgba(225, 59, 48, .055);
+  border-left: 5px solid var(--red);
+  font-size: 14px;
+}
+
+.lang-pane blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.lang-pane ul,
+.lang-pane ol {
+  margin: 0 0 1.5em;
+  padding-left: 1.4em;
+}
+
+.lang-pane li {
+  margin-bottom: .5em;
+}
+
+.lang-pane hr {
+  height: 1px;
+  margin: 70px 0;
+  border: 0;
+  background: var(--line);
+}
+
+.lang-pane code {
+  padding: .15em .4em;
+  background: rgba(17, 19, 24, .06);
+  font-size: .9em;
+}
+
+#signal {
+  opacity: .2;
+}
+
+@media (max-width: 1100px) {
+  .press-header-actions {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .press-header-actions .header-contact {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .press-shell {
+    border-inline: 0;
+  }
+
+  .press-hero {
+    min-height: 70svh;
+  }
+
+  .press-hero h1 {
+    font-size: clamp(4.6rem, 25vw, 8rem);
+  }
+
+  .press-hero-foot {
+    grid-template-columns: 1fr;
+  }
+
+  .press-hero-foot > div {
+    display: none;
+  }
+
+  .press-document {
+    padding-inline: 20px;
+  }
+
+  .lang-pane {
+    font-size: 14px;
+  }
+
+  .lang-pane table {
+    display: block;
+    overflow-x: auto;
+    font-size: 12px;
+  }
+
+  .lang-pane th,
+  .lang-pane td {
+    min-width: 120px;
+    padding: 10px;
+  }
+
+  .lang-pane blockquote {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .press-header-actions {
+    gap: 0;
+  }
+
+  .langs button {
+    min-height: 30px;
+    padding: 6px 7px;
+    font-size: 7px;
+  }
+
+  .press-hero-meta span:last-child {
+    display: none;
+  }
+}
+
+@media print {
+  .site-header,
+  #signal,
+  footer {
+    display: none;
+  }
+
+  .press-shell {
+    border: 0;
+  }
+
+  .press-hero {
+    min-height: auto;
+    padding: 0 0 36px;
+  }
+
+  .press-hero h1 {
+    margin: 40px 0;
+    font-size: 80pt;
+  }
+
+  .press-document {
+    max-width: none;
+    padding: 28px 0 0;
+  }
+
+  .lang-pane {
+    font-size: 10.5pt;
+  }
+
+  .lang-pane h2,
+  .lang-pane h3,
+  .lang-pane table {
+    break-inside: avoid;
+  }
+}

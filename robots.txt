@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Disallow: /color-lab.html
+Disallow: /design-concept-b.html
+Disallow: /design-concept-c.html
+Disallow: /design-concept-d.html
+Disallow: /design-concept-d2.html
+Disallow: /design-concept-d3.html
+Disallow: /design-concept-e.html
+Disallow: /nav-B-2dan.html
+Disallow: /nav-C-scroll.html
+Disallow: /works-visual-mock.html
+Disallow: /tools.html
+
+Sitemap: https://raito.studio/sitemap.xml
