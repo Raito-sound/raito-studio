@@ -1,0 +1,38 @@
+name: Publish site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/configure-pages@v5
+      - name: Prepare public files
+        run: |
+          mkdir -p _site/works _site/press
+          cp index.html 404.html site.css site.js 404.css favicon.svg og-raito.png robots.txt sitemap.xml llms.txt .nojekyll _site/
+          cp -R assets _site/
+          cp works/index.html works/works.css works/works.js _site/works/
+          cp press/index.html press/press.css _site/press/
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

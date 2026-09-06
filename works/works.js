@@ -6,7 +6,11 @@
   const empty = document.getElementById('empty-state');
   let category = 'all';
 
-  const normalize = (value) => value.toLocaleLowerCase().normalize('NFKC').trim();
+  const normalize = (value) => value.normalize('NFKC').toLocaleLowerCase()
+    .replace(/[\p{P}\p{S}]+/gu, ' ').replace(/\s+/g, ' ').trim();
+  const searchIndex = new Map(entries.map((entry) => [
+    entry, normalize(`${entry.textContent} ${entry.dataset.search || ''}`),
+  ]));
 
   const update = () => {
     const query = normalize(search?.value || '');
@@ -14,7 +18,7 @@
 
     entries.forEach((entry) => {
       const matchesCategory = category === 'all' || entry.dataset.category === category;
-      const matchesQuery = !query || normalize(entry.dataset.search || entry.textContent).includes(query);
+      const matchesQuery = !query || searchIndex.get(entry).includes(query);
       const matches = matchesCategory && matchesQuery;
       entry.hidden = !matches;
       if (matches) visible += 1;

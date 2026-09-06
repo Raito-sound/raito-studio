@@ -21,7 +21,7 @@
   <meta name="twitter:image" content="https://raito.studio/og-raito.png">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="site.css?v=74828c2661">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,12 +33,12 @@
         "name": "Raito.studio",
         "description": "Official website of Japanese composer and sound designer Raito (来兎).",
         "inLanguage": "en",
-        "about": { "@id": "https://raito.studio/#raito" },
+        "about": { "@id": "https://raito.studio/#person" },
         "dateModified": "2026-08-22"
       },
       {
         "@type": "Person",
-        "@id": "https://raito.studio/#raito",
+        "@id": "https://raito.studio/#person",
         "name": "Raito",
         "alternateName": ["来兎", "RAITO", "Masaru Kuba", "久場 超"],
         "url": "https://raito.studio/",
@@ -62,21 +62,20 @@
         "name": "Lisa-Rec Inc.",
         "alternateName": "株式会社リサレコ",
         "url": "https://lisa-rec.net/",
-        "founder": { "@id": "https://raito.studio/#raito" },
+        "founder": { "@id": "https://raito.studio/#person" },
         "foundingDate": "2010-03"
       }
     ]
   }
   </script>
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
-  <canvas id="signal" aria-hidden="true"></canvas>
 
-  <header class="site-header" id="top">
+  <header class="site-header">
     <a class="brand" href="#top" aria-label="Raito.studio home"><img src="assets/raito-logo.svg" alt="Raito / 来兎"></a>
     <nav aria-label="Primary navigation">
-      <a href="#top" aria-current="page">Home</a><a href="works/">Works</a><a href="#profile">Profile</a><a href="press/">Press</a>
+      <a href="#top" aria-current="page">Home</a><a href="works/">Works</a><a href="#profile">Profile</a><a href="press/?lang=en">Press</a>
     </nav>
     <a class="header-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
   </header>
@@ -84,25 +83,24 @@
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span>Composer / Sound Designer — Okinawa, Japan</p>
+        <p class="eyebrow"><span aria-hidden="true"></span>Composer / Sound Designer — Okinawa, Japan</p>
+        <span class="hero-since">EST. 1997</span>
         <h1 id="hero-title" class="hero-logo"><img src="assets/raito-logo.svg" alt="Raito / 来兎"></h1>
         <div class="hero-bottom">
-          <p class="manifesto">Game music that lives<br>beyond the game.</p>
-          <a class="round-link" href="#works" aria-label="Explore selected works"><span>Explore</span><b aria-hidden="true">↓</b></a>
+          <p class="manifesto">Game music <br>that lives<br><em>beyond the game.</em></p>
+          <div class="hero-actions">
+            <a class="round-link" href="#works" aria-label="Explore selected works"><span>Selected works</span><b aria-hidden="true">↗</b></a>
+            <a class="listen-link" href="https://open.spotify.com/artist/6UunbAVLWAebLi1UB7GyXk" target="_blank" rel="noopener">Listen on Spotify <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </div>
-      <div class="hero-stage" aria-label="Raito career overview">
-        <div class="stage-meta"><span>SOUND / 001</span><span>EST. 1997</span></div>
-        <div class="orbit" aria-hidden="true"><i></i><i></i><i></i><b>R</b></div>
-        <div class="stage-copy"><span>FIGHTING GAME MUSIC</span><strong>100M+</strong><small>CATALOG STREAMS</small></div>
-        <div class="stage-foot"><span>NAHA</span><span>26.2124° N</span><span>127.6809° E</span></div>
-      </div>
+      <div class="hero-stage" aria-hidden="true"><canvas id="signal"></canvas></div>
     </section>
 
     <div class="ticker" aria-label="Selected credits"><div><span>MELTY BLOOD</span><i>◆</i><span>UNDER NIGHT IN-BIRTH</span><i>◆</i><span>DOUBLE DRAGON REVIVE</span><i>◆</i><span>SK8 THE INFINITY</span><i>◆</i><span>FATE/GRAND ORDER</span></div></div>
 
     <section class="proof" aria-label="Career highlights">
-      <div class="proof-intro reveal"><span>LISTENED WORLDWIDE</span><p>Built in Okinawa.<br>Played everywhere.</p></div>
+      <div class="proof-intro reveal"><span>LISTENED WORLDWIDE</span><p>Built in Okinawa.<br> Played everywhere.</p></div>
       <div class="proof-item reveal"><strong>1997</strong><span>ACTIVE SINCE</span></div>
       <div class="proof-item reveal"><strong>100M+</strong><span>TOTAL STREAMS</span></div>
       <div class="proof-item reveal"><strong>20M+</strong><span>ONE TRACK</span></div>
@@ -124,24 +122,36 @@
       </div>
       <div class="featured-grid">
         <article class="feature feature-hero reveal">
-          <img class="feature-art" src="assets/work-melty-hires.jpg" alt="" loading="lazy" decoding="async" width="1920" height="1080">
-          <div class="feature-top"><span>01</span><a href="https://meltyblood.typelumina.com/" target="_blank" rel="noopener">OFFICIAL ↗</a><span>2003—2021</span></div>
-          <div class="feature-body"><p>FIGHTING GAME / SERIES</p><h3>MELTY<br>BLOOD</h3><div><span>COMPOSER</span><span>ARRANGER</span></div></div>
+          <a class="feature-visual" aria-label="MELTY BLOOD official website" href="https://meltyblood.typelumina.com/" target="_blank" rel="noopener">
+            <img class="feature-art" src="assets/work-melty-hires.jpg" alt="" loading="lazy" decoding="async" width="1920" height="1080">
+            <div class="feature-top"><span>01</span><span class="feature-open">Official <b aria-hidden="true">↗</b></span></div>
+            <div class="feature-body"><p>FIGHTING GAME / SERIES</p><h3>MELTY BLOOD</h3></div>
+          </a>
+          <div class="feature-caption"><div><span>COMPOSER</span><span>ARRANGER</span></div><span>2003—2021</span></div>
         </article>
         <article class="feature feature-red reveal">
-          <img class="feature-art" src="assets/work-uni-web.webp" alt="" loading="lazy" decoding="async" width="1280" height="1410">
-          <div class="feature-top"><span>02</span><a href="https://www.arcsystemworks.fr/games/under-night-in-birth-ii/" target="_blank" rel="noopener">OFFICIAL ↗</a><span>2012—2024</span></div>
-          <div class="feature-body"><p>FIGHTING GAME / SERIES</p><h3>UNDER NIGHT<br>IN-BIRTH</h3><div><span>MUSIC</span><span>SOUND EFFECTS</span></div></div>
+          <a class="feature-visual" aria-label="UNDER NIGHT IN-BIRTH official website" href="https://www.arcsystemworks.fr/games/under-night-in-birth-ii/" target="_blank" rel="noopener">
+            <img class="feature-art" src="assets/work-uni-web.webp" alt="" loading="lazy" decoding="async" width="1280" height="1410">
+            <div class="feature-top"><span>02</span><span class="feature-open">Official <b aria-hidden="true">↗</b></span></div>
+            <div class="feature-body"><p>FIGHTING GAME / SERIES</p><h3>UNDER NIGHT<br>IN-BIRTH</h3></div>
+          </a>
+          <div class="feature-caption"><div><span>MUSIC</span><span>SOUND EFFECTS</span></div><span>2012—2024</span></div>
         </article>
         <article class="feature feature-blue reveal">
-          <img class="feature-art" src="assets/work-double-dragon.jpg" alt="" loading="lazy" decoding="async" width="1800" height="1012">
-          <div class="feature-top"><span>03</span><a href="https://www.arcsystemworks.jp/ddrev/" target="_blank" rel="noopener">OFFICIAL ↗</a><span>2025</span></div>
-          <div class="feature-body"><p>GAME / ORIGINAL SOUNDTRACK</p><h3>DOUBLE DRAGON<br>REVIVE</h3><div><span>COMPOSER</span><span>ARRANGER</span></div></div>
+          <a class="feature-visual" aria-label="Double Dragon Revive official website" href="https://www.arcsystemworks.jp/ddrev/" target="_blank" rel="noopener">
+            <img class="feature-art" src="assets/work-double-dragon.jpg" alt="" loading="lazy" decoding="async" width="1800" height="1012">
+            <div class="feature-top"><span>03</span><span class="feature-open">Official <b aria-hidden="true">↗</b></span></div>
+            <div class="feature-body"><p>GAME / ORIGINAL SOUNDTRACK</p><h3>DOUBLE DRAGON<br>REVIVE</h3></div>
+          </a>
+          <div class="feature-caption"><div><span>COMPOSER</span><span>ARRANGER</span></div><span>2025</span></div>
         </article>
         <article class="feature feature-paper reveal">
-          <img class="feature-art" src="assets/work-sk8.jpg" alt="" loading="lazy" decoding="async" width="680" height="863">
-          <div class="feature-top"><span>04</span><a href="https://sk8-project.com/bddvd/" target="_blank" rel="noopener">OFFICIAL ↗</a><span>2021</span></div>
-          <div class="feature-body"><p>TV ANIMATION / SCORE</p><h3>SK8 THE<br>INFINITY</h3><div><span>COMPOSER</span><span>ARRANGER</span></div></div>
+          <a class="feature-visual" aria-label="SK8 the Infinity official website" href="https://sk8-project.com/bddvd/" target="_blank" rel="noopener">
+            <img class="feature-art" src="assets/work-sk8.jpg" alt="" loading="lazy" decoding="async" width="680" height="863">
+            <div class="feature-top"><span>04</span><span class="feature-open">Official <b aria-hidden="true">↗</b></span></div>
+            <div class="feature-body"><p>TV ANIMATION / SCORE</p><h3>SK8 THE INFINITY</h3></div>
+          </a>
+          <div class="feature-caption"><div><span>COMPOSER</span><span>ARRANGER</span></div><span>2021</span></div>
         </article>
       </div>
       <p class="artwork-note">Promotional, package and jacket artwork © their respective rights holders. Shown to identify credited works.</p>
@@ -183,9 +193,9 @@
       <div class="profile-grid">
         <div class="profile-lead">
           <figure class="portrait reveal"><img src="assets/raito-portrait-web.jpg" alt="Composer and sound designer Raito" loading="lazy" decoding="async" width="2000" height="1500"><figcaption><span>RAITO / 来兎</span><span>NAHA, OKINAWA</span></figcaption></figure>
-          <h2 id="profile-title" class="reveal">A long game,<br>played from Okinawa.</h2>
         </div>
         <div class="profile-copy reveal">
+          <h2 id="profile-title">A long game,<br>played from Okinawa.</h2>
           <p>Raito (来兎) is a Japanese composer and sound designer based in Naha, Okinawa. He began writing game music in 1997 and is best known for the <i>MELTY BLOOD</i> and <i>UNDER NIGHT IN-BIRTH</i> series.</p>
           <p>His work also includes <i>Double Dragon Revive</i>, the TV anime <i>SK8 the Infinity</i>, arrangements for <i>Fate/Grand Order</i>, and sound effects for <i>Indivisible</i>.</p>
           <p>He founded Lisa-Rec Inc. in 2010 and continues to work from Okinawa.</p>
@@ -193,7 +203,7 @@
             <div><dt>Based in</dt><dd>Naha, Okinawa, Japan</dd></div><div><dt>Active since</dt><dd>1997</dd></div>
             <div><dt>Role</dt><dd>Composer / Sound Designer</dd></div><div><dt>Company</dt><dd><a href="https://lisa-rec.net/">Lisa-Rec Inc. ↗</a></dd></div>
           </dl>
-          <a class="text-link" href="press/">Open press kit <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="press/?lang=en">Open press kit <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
