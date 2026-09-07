@@ -1,6 +1,8 @@
 /* Browser tools, using the portfolio's paper, ink and type system. */
 .app-page { --app-accent: var(--red); }
 .app-page.carve { --app-accent: var(--blue); }
+.app-page.keys { --app-accent: #72502d; }
+.app-page.pitch { --app-accent: #24623d; }
 .app-main { max-width: var(--max); margin: 0 auto; padding: 48px var(--pad) 80px; }
 .app-breadcrumb { display: flex; flex-wrap: wrap; gap: 12px; color: var(--muted); font-size: .875rem; }
 .app-breadcrumb a { text-decoration-color: var(--line); }
@@ -46,4 +48,56 @@
   .app-facts { grid-template-columns: 1fr; gap: 20px; }
   .app-facts > div { padding: 0; border: 0; }
   .app-facts dt { margin-bottom: 4px; }
+}
+
+/* Shared directory, bilingual introductions and practical reading pages. */
+.tools-topline { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px 32px; }
+.language-links { display:flex; align-items:center; gap:14px; font-size:.875rem; }
+.language-links a { min-height:44px; display:inline-flex; align-items:center; }
+.language-links a[aria-current="page"] { font-weight:700; text-decoration:none; }
+.tools-intro { padding:52px 0 42px; max-width:58rem; }
+.tools-intro h1 { font-weight:500; font-size:clamp(2.3rem,5vw,4.5rem); line-height:1.15; letter-spacing:-.04em; margin:0 0 24px; text-wrap:balance; }
+.tools-intro > p:not(.app-category) { max-width:52rem; }
+.tools-grid,.guide-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 48px; }
+.tool-card { padding:32px 0; border-top:1px solid var(--line); min-width:0; }
+.tool-card h2 { font-weight:500; font-size:clamp(1.45rem,2.4vw,2rem); line-height:1.4; margin:0 0 16px; }
+.tool-card h2 a { text-decoration:none; }
+.tool-card h2 a:hover { text-decoration:underline; }
+.tool-card > p:not(.app-category),.guide-card p { color:var(--muted); }
+.tool-card .app-actions { margin-top:20px; gap:12px 24px; font-size:.9375rem; }
+.tool-card .app-actions a { display:inline-flex; align-items:center; min-height:44px; }
+.tools-guides { margin-top:48px; border-top:1px solid var(--line); padding-top:32px; }
+.tools-guides > h2,.tools-related > h2 { font-weight:500; font-size:1.75rem; }
+.guide-card { display:block; position:relative; padding:28px 32px 28px 0; text-decoration:none; border-top:1px solid var(--line); }
+.guide-card h3 { font-weight:500; font-size:1.25rem; line-height:1.5; margin:0 0 14px; }
+.guide-card:hover h3 { text-decoration:underline; }
+.guide-card > span:last-child { position:absolute; right:0; top:30px; }
+.guide-card p { font-size:1rem; }
+.reading-copy { margin:0; max-width:48rem; line-height:1.95; }
+.guide-callout { padding:36px 0; border-bottom:1px solid var(--line); }
+.guide-callout h2 { font-size:clamp(1.4rem,2vw,2rem); font-weight:500; }
+.tools-related { padding-top:32px; }
+.tools-related > a { display:block; padding:14px 0; border-bottom:1px solid var(--line); font-size:1rem; }
+.guide-article { max-width:58rem; margin:0 auto; }
+.guide-heading { padding:48px 0 36px; border-bottom:1px solid var(--line); }
+.guide-heading h1 { font-size:clamp(2rem,4vw,3.5rem); line-height:1.3; font-weight:500; letter-spacing:-.035em; text-wrap:balance; margin:0 0 20px; }
+.guide-heading .app-lead { font-size:1.2rem; line-height:1.85; }
+.guide-meta { font-size:.875rem; color:var(--muted); }
+.guide-body { max-width:48rem; margin:0 auto; padding-top:12px; }
+.guide-body h2 { font-size:clamp(1.4rem,2.5vw,1.85rem); line-height:1.5; font-weight:500; margin:40px 0 18px; }
+.guide-body p,.guide-body li { font-size:1.0625rem; line-height:1.95; }
+.guide-body li { margin-bottom:14px; padding-left:6px; }
+.guide-body pre { white-space:pre-wrap; overflow-wrap:anywhere; padding:24px; border-left:3px solid var(--app-accent); background:var(--paper-2); font-size:1.125rem; line-height:2; }
+.guide-body code { overflow-wrap:anywhere; font-size:.95em; }
+.table-scroll { overflow-x:auto; margin:24px 0; }
+.guide-body table { width:100%; border-collapse:collapse; font-size:1rem; }
+.guide-body caption { text-align:left; color:var(--muted); padding-bottom:12px; font-size:.875rem; }
+.guide-body th,.guide-body td { padding:12px 14px; text-align:left; border-bottom:1px solid var(--line); }
+.guide-body th { font-weight:600; }
+.guide-body thead { background:var(--paper-2); }
+@media(max-width:700px) {
+  .tools-grid,.guide-grid { grid-template-columns:1fr; }
+  .tools-intro,.guide-heading { padding-top:32px; }
+  .tools-topline { gap:8px; }
+  .guide-body th,.guide-body td { padding:10px 8px; }
 }

@@ -7,11 +7,14 @@ Official portfolio for composer and sound designer Raito (来兎), with introduc
 - `/` — portfolio, profile, browser tools and contact
 - `/works/` — searchable complete works index
 - `/press/` — bilingual press kit
-- `/tally/` — English introduction to TALLY, linking to https://tally.raito.studio/
-- `/carve/` — English introduction to CARVE, linking to https://carve.raito.studio/
+- `/tools/` and `/ja/tools/` — English/Japanese directory of all four tools and practical guides
+- `/tally/`, `/carve/`, `/keys/`, `/pitch/` — English introductions, with corresponding `/ja/` translations
+- `/guides/japanese-lyrics-mora/` and `/guides/audio-loop-seams/` — practical guides, with corresponding `/ja/guides/` translations
 - `/404.html` — not-found page
 
-The TALLY and CARVE apps remain in their own GitHub repositories (`Raito-sound/tally` and `Raito-sound/carve`) and publish independently through GitHub Pages. This repository contains their introduction pages only.
+The TALLY and CARVE apps remain in their own GitHub repositories (`Raito-sound/tally` and `Raito-sound/carve`) and publish independently through GitHub Pages. KEYS and PITCH use their existing Sites projects. This repository contains introductions and guides, not copies of the apps.
+
+Edit `scripts/build-tools-pages.py` for bilingual copy, then run `python3 scripts/build-tools-pages.py`. Generated HTML is checked in, so the existing production build needs no new runtime or dependencies. Each translation has its own self-canonical URL and reciprocal English/Japanese hreflang links. Update `sitemap.xml` when adding routes. App and introduction URLs serve different purposes and must not canonicalize to each other.
 
 `tools.html` is an unpublished local draft and is excluded from version control and the site build.
 
@@ -25,9 +28,11 @@ The build explicitly selects public HTML, styles, scripts and assets. Documentat
 
 ## App subdomains
 
-Both app repositories have their custom domain registered in GitHub Pages with HTTPS enabled. The corresponding Cloudflare DNS records should be CNAMEs to `raito-sound.github.io`, using DNS-only mode:
+The app custom domains use HTTPS. Their Cloudflare CNAME records use DNS-only mode:
 
 - `tally.raito.studio` → `raito-sound.github.io`
 - `carve.raito.studio` → `raito-sound.github.io`
+- `keys.raito.studio` → `custom-domains.chatgpt.site`
+- `pitch.raito.studio` → `custom-domains.chatgpt.site`
 
 The introduction URLs and app URLs serve different purposes; neither redirects to the other. App updates are deployed from each app repository without copying the app into this portfolio.

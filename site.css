@@ -23,6 +23,7 @@ button, input, summary { font: inherit; }
 button, a { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 [hidden] { display: none !important; }
 :focus-visible { outline: 2px solid var(--red); outline-offset: 6px; }
+.tools .app-actions { display:flex; flex-wrap:wrap; align-items:center; gap:16px 32px; margin-top:28px; }
 ::selection { color: var(--white); background: var(--red); }
 .skip-link { position: fixed; left: 16px; top: -100px; z-index: 100; padding: 12px 18px; background: var(--ink); color: var(--white); }
 .skip-link:focus { top: 12px; }

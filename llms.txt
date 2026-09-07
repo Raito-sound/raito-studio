@@ -48,6 +48,11 @@ The canonical human-readable and machine-readable project list is published at h
 
 ## Browser tools
 
+- All tools: https://raito.studio/tools/ . Japanese directory: https://raito.studio/ja/tools/ . Introductions and guides have separate English and Japanese URLs.
+- KEYS introduction: https://raito.studio/keys/ — Browser piano and organ with a metronome, short-take recording and MIDI/WAV export. App: https://keys.raito.studio/ . A completed new take replaces the previous take; export files to keep multiple ideas.
+- PITCH introduction: https://raito.studio/pitch/ — Browser guitar, bass and chromatic instrument tuner with a large cents meter, presets and reference tones. App: https://pitch.raito.studio/ . Microphone permission is required for detection; input audio stays on the device.
+- Japanese lyrics guide: https://raito.studio/guides/japanese-lyrics-mora/ . Japanese: https://raito.studio/ja/guides/japanese-lyrics-mora/ . Character counts, kana-based mora counts and musical phrasing with original examples.
+- Audio loop guide: https://raito.studio/guides/audio-loop-seams/ . Japanese: https://raito.studio/ja/guides/audio-loop-seams/ . CARVE Seam checks, zero crossings, marker-based OGG loop tags and sample positions.
 - TALLY introduction: https://raito.studio/tally/ — Japanese text editor and analyzer for character counts, kana-based mora counts, and writing modes. App: https://tally.raito.studio/ . Source: https://github.com/Raito-sound/tally . Text is processed in the browser.
 - CARVE introduction: https://raito.studio/carve/ — Browser wave editor with range editing, fades, normalization, loop seam checks, and WAV/OGG/MP3 export. App: https://carve.raito.studio/ . Source: https://github.com/Raito-sound/carve . Audio is processed locally; OGG/MP3 encoders require a network download.
 
