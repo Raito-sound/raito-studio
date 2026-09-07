@@ -7,8 +7,8 @@ Official portfolio for composer and sound designer Raito (来兎), with introduc
 - `/` — portfolio, profile, browser tools and contact
 - `/works/` — searchable complete works index
 - `/press/` — bilingual press kit
-- `/tally/` — Japanese introduction to TALLY, linking to https://tally.raito.studio/
-- `/carve/` — Japanese introduction to CARVE, linking to https://carve.raito.studio/
+- `/tally/` — English introduction to TALLY, linking to https://tally.raito.studio/
+- `/carve/` — English introduction to CARVE, linking to https://carve.raito.studio/
 - `/404.html` — not-found page
 
 The TALLY and CARVE apps remain in their own GitHub repositories (`Raito-sound/tally` and `Raito-sound/carve`) and publish independently through GitHub Pages. This repository contains their introduction pages only.
