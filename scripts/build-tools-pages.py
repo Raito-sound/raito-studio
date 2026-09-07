@@ -165,9 +165,10 @@ def render(slug, lang, title, description, body, kind='WebPage', app=None):
     ja_current = ' aria-current="page"' if is_ja else ''
     lang_switch = f'<a href="{path_for(slug, "en")}" lang="en" hreflang="en"{en_current}>English</a><span aria-hidden="true">/</span><a href="{path_for(slug, "ja")}" lang="ja" hreflang="ja"{ja_current}>日本語</a>'
     tools_path = path_for('tools', lang)
+    document_title = title if title.startswith('Raito Studio Tools') else title + ' | Raito Studio Tools'
     html = f'''<!doctype html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{escape(title)} | Raito Studio Tools</title>
+<title>{escape(document_title)}</title>
 <meta name="description" content="{escape(description, quote=True)}">
 <link rel="canonical" href="{url}"><link rel="alternate" hreflang="en" href="{en}"><link rel="alternate" hreflang="ja" href="{ja}"><link rel="alternate" hreflang="x-default" href="{en}">
 <meta name="robots" content="index,follow"><meta name="theme-color" content="#efede5">
