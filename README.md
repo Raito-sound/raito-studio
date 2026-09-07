@@ -1,22 +1,33 @@
 # Raito.studio
 
-Official English-language portfolio for composer and sound designer Raito (来兎).
+Official portfolio for composer and sound designer Raito (来兎), with introductions to his browser tools.
 
-## Launch scope
+## Public pages
 
-- `/` — portfolio, profile and contact
+- `/` — portfolio, profile, browser tools and contact
 - `/works/` — searchable complete works index
 - `/press/` — bilingual press kit
+- `/tally/` — Japanese introduction to TALLY, linking to https://tally.raito.studio/
+- `/carve/` — Japanese introduction to CARVE, linking to https://carve.raito.studio/
 - `/404.html` — not-found page
 
-`tools.html` is retained locally as a working draft and is intentionally excluded from launch navigation and version control until its content and destinations are complete.
+The TALLY and CARVE apps remain in their own GitHub repositories (`Raito-sound/tally` and `Raito-sound/carve`) and publish independently through GitHub Pages. This repository contains their introduction pages only.
+
+`tools.html` is an unpublished local draft and is excluded from version control and the site build.
 
 ## Publishing
 
-The folder is prepared for a standalone GitHub Pages repository using the custom domain `raito.studio`. `CNAME`, `.nojekyll`, canonical metadata, Open Graph metadata, `robots.txt`, `sitemap.xml`, `llms.txt` and a custom 404 page are included.
+The production site at https://raito.studio/ is hosted on Cloudflare Pages, project `raito-studio`, connected to `Raito-sound/raito-studio` on branch `main`. DNS is managed by Cloudflare.
 
-The existing Wix site should remain active until the GitHub Pages preview has been checked and the DNS cutover is scheduled.
+Run `sh .cloudflare/pages-build.sh` from this directory to produce `_site/`. Cloudflare Pages publishes that output. GitHub Actions uses the same build script for the secondary preview at https://raito-sound.github.io/raito-studio/.
 
-The GitHub repository is `Raito-sound/raito-studio`. Updates to `main` publish through `.github/workflows/pages.yml`. Only the launch HTML, styles, scripts and assets are served; source Markdown and project documentation are excluded from the website artifact.
+The build explicitly selects public HTML, styles, scripts and assets. Documentation, source Markdown, draft pages and the app repositories are not included in the website artifact.
 
-The initial public URL is `https://raito-sound.github.io/raito-studio/`. Configure the custom domain in GitHub Pages before updating the existing Wix DNS records. Actions deployment uses the Pages setting, rather than the local `CNAME` file.
+## App subdomains
+
+Both app repositories have their custom domain registered in GitHub Pages with HTTPS enabled. The corresponding Cloudflare DNS records should be CNAMEs to `raito-sound.github.io`, using DNS-only mode:
+
+- `tally.raito.studio` → `raito-sound.github.io`
+- `carve.raito.studio` → `raito-sound.github.io`
+
+The introduction URLs and app URLs serve different purposes; neither redirects to the other. App updates are deployed from each app repository without copying the app into this portfolio.

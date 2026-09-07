@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CARVE — ブラウザで使える波形エディタ | Raito.studio</title>
+  <meta name="description" content="CARVEはブラウザで使える音声波形エディタ。範囲編集、フェード、ノーマライズ、ループ確認からWAV・OGG・MP3書き出しまで。音声は端末内で処理されます。">
+  <link rel="canonical" href="https://raito.studio/carve/">
+  <meta name="theme-color" content="#efede5">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Raito.studio">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://raito.studio/carve/">
+  <meta property="og:title" content="CARVE — 音を切り出し、ループを仕上げる。">
+  <meta property="og:description" content="範囲編集、フェード、ノーマライズ、ループ確認。ブラウザで使える波形エディタ。WAV・OGG・MP3に書き出せます。">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../site.css?v=apps-20260907">
+  <link rel="stylesheet" href="../apps.css?v=20260907">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","url":"https://raito.studio/carve/","name":"CARVE — ブラウザ波形エディタ","inLanguage":"ja","isPartOf":{"@id":"https://raito.studio/#website"},"about":{"@type":"WebApplication","name":"CARVE","url":"https://carve.raito.studio/","applicationCategory":"MultimediaApplication","operatingSystem":"Web browser","description":"範囲編集・フェード・ループ確認とWAV・OGG・MP3書き出しに対応する波形エディタ。","creator":{"@id":"https://raito.studio/#person"}}}
+  </script>
+</head>
+<body id="top" class="app-page carve">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Raito.studio home"><img src="../assets/raito-logo.svg" alt="Raito / 来兎"></a>
+    <nav aria-label="Primary navigation"><a href="../">Home</a><a href="../works/">Works</a><a href="../#tools">Tools</a><a href="../press/?lang=en">Press</a></nav>
+    <a class="header-contact" href="../#contact">Contact <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main" class="app-main">
+    <nav class="app-breadcrumb" aria-label="パンくず"><a href="../#tools">Tools</a><span aria-hidden="true">/</span><span aria-current="page">CARVE</span></nav>
+    <section class="app-hero" aria-labelledby="app-title">
+      <div><p class="app-category" lang="en">WAVE EDITOR</p><h1 id="app-title">CARVE</h1><p class="app-lead">音を切り出し、<br>ループを仕上げる。</p></div>
+      <div class="app-summary">
+        <p>音声ファイルを開いて、必要な範囲を編集。フェードや音量の調整、ゲーム音楽のループ確認から書き出しまで、ブラウザで作業できる波形エディタです。</p>
+        <p lang="en">A wave editor that runs in your browser. Edit audio, shape fades, check loop seams and export WAV, OGG or MP3.</p>
+        <div class="app-actions"><a class="app-open" href="https://carve.raito.studio/">CARVEを開く <span aria-hidden="true">↗</span></a><a class="app-secondary" href="https://carve.raito.studio/manual.html">マニュアル（英語） ↗</a></div>
+      </div>
+    </section>
+    <dl class="app-facts"><div><dt>利用方法</dt><dd>インストール・アカウント不要</dd></div><div><dt>音声の処理</dt><dd>端末内で完結</dd></div><div><dt>書き出し</dt><dd>WAV / OGG Vorbis / MP3</dd></div></dl>
+    <section class="app-detail" aria-labelledby="features-title">
+      <div><p class="app-category" lang="en">FEATURES</p><h2 id="features-title">波形を見ながら、<br>細部を整える。</h2></div>
+      <dl class="app-features">
+        <div><dt>選んだ範囲を編集</dt><dd>範囲の削除・コピー・挿入ペースト・新規ファイルへの切り出しに対応。ゼロクロスへのスナップを使って、選択位置を調整できます。</dd></div>
+        <div><dt>フェードと音量を調整</dt><dd>5種類のカーブからフェードイン・アウトを選択。目標ピーク値へのノーマライズと、dB指定のゲイン調整もできます。</dd></div>
+        <div><dt>ループのつながりを聴く</dt><dd>「Seam」でループ終端から先頭へのつながりを試聴。マーカーで指定したループ範囲を、OGGのLOOPSTART・LOOPLENGTHタグとして書き出せます。</dd></div>
+        <div><dt>用途に合う形式で書き出す</dt><dd>WAVは16-bit・24-bit・32-bit floatに対応。OGG VorbisとMP3にも書き出せます。読み込み時は元のサンプルレートを使用し、保持できない場合は警告を表示します。</dd></div>
+      </dl>
+    </section>
+    <section class="app-detail" aria-labelledby="start-title">
+      <div><p class="app-category" lang="en">QUICK START</p><h2 id="start-title">ファイルを開いて、<br>波形を選ぶ。</h2></div>
+      <div><ol class="app-steps"><li>CARVEを開き、WAV・AIFF・FLAC・MP3などの音声ファイルをドロップするか「Open」で選びます。</li><li>波形をドラッグして範囲を選び、フェードや音量、ループ位置を調整します。</li><li>書き出し形式を選び、「Export」で音声ファイルを保存します。</li></ol><p class="app-note">音声はサーバーへアップロードされません。OGG・MP3の書き出しには、エンコーダーを読み込むための通信が必要です。細かな波形操作には、パソコンでの利用をおすすめします。</p><a class="app-secondary" href="https://github.com/Raito-sound/carve">GitHubでソースを見る ↗</a></div>
+    </section>
+    <aside class="app-related" aria-label="関連ツール"><p>来兎のブラウザツール</p><a href="../tally/">TALLY — 文章とモーラを確かめる <span aria-hidden="true">↗</span></a></aside>
+  </main>
+  <footer><span>© 2026 RAITO.STUDIO</span><a href="../#tools">ALL TOOLS</a><a href="#top">BACK TO TOP ↑</a></footer>
+</body>
+</html>
