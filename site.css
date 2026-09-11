@@ -302,3 +302,14 @@ footer a:hover { color: var(--red); }
   .practice, .contact { color: black; background: white; }
   .practice *, .contact * { color: black; }
 }
+
+/* Language switch in the header (shared by all pages) */
+.header-right { justify-self: end; display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); }
+.lang-switch { display: flex; align-items: center; gap: 8px; font-size: .8125rem; letter-spacing: .04em; white-space: nowrap; }
+.lang-switch a { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); text-decoration: none; }
+.lang-switch a:hover { color: var(--ink); }
+.lang-switch a[aria-current="page"] { color: var(--ink); font-weight: 700; }
+.lang-switch span { color: var(--line); }
+.lang-switch, .lang-switch a, .header-right .header-contact { white-space: nowrap; flex-shrink: 0; }
+@media (max-width: 850px) { .header-right { grid-column: 2; grid-row: 1; } }
+@media (max-width: 720px) { .header-right { gap: 10px; } .lang-switch { font-size: .75rem; } .header-right .header-contact { gap: 10px; } }

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{meta_description}}">
+  {{alternates}}
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="theme-color" content="#efede5">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Raito.studio">
+  {{og_locale}}
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:title" content="{{og_title}}">
+  <meta property="og:description" content="{{og_description}}">
+  <meta property="og:image" content="https://raito.studio/og-raito.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{og_title}}">
+  <meta name="twitter:description" content="{{tw_description}}">
+  <meta name="twitter:image" content="https://raito.studio/og-raito.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="/lang.js" defer></script>
+  <link rel="stylesheet" href="/site.css?v=lang-20260911">
+  {{jsonld}}
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">{{skip}}</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Raito.studio home"><img src="/assets/raito-logo.svg" alt="Raito / 来兎"></a>
+    <nav aria-label="{{nav_aria}}">
+      <a href="#top" aria-current="page">{{nav_home}}</a><a href="/{{tools_prefix}}works/">{{nav_works}}</a><a href="/{{tools_prefix}}tools/">{{nav_tools}}</a><a href="#profile">{{nav_profile}}</a><a href="/press/?lang={{press_lang}}">{{nav_press}}</a>
+    </nav>
+    <div class="header-right">{{lang_switch}}<a class="header-contact" href="#contact">{{contact_label}}</a></div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true"></span>{{eyebrow}}</p>
+        <span class="hero-since">EST. 1997</span>
+        <h1 id="hero-title" class="hero-logo"><img src="/assets/raito-logo.svg" alt="Raito / 来兎"></h1>
+        <div class="hero-bottom">
+          <p class="manifesto">{{manifesto}}</p>
+          <div class="hero-actions">
+            <a class="round-link" href="#works" aria-label="{{selected_aria}}">{{selected_label}}<b aria-hidden="true">↗</b></a>
+            <a class="listen-link" href="https://open.spotify.com/artist/4gvNo6XIRTD2N0l75sY6II" target="_blank" rel="noopener">{{listen}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-stage" aria-hidden="true"><canvas id="signal"></canvas></div>
+    </section>
+
+    <div class="ticker" aria-label="{{ticker_aria}}"><div><span>MELTY BLOOD</span><i>◆</i><span>UNDER NIGHT IN-BIRTH</span><i>◆</i><span>DOUBLE DRAGON REVIVE</span><i>◆</i><span>SK8 THE INFINITY</span><i>◆</i><span>FATE/GRAND ORDER</span></div></div>
+
+    <section class="proof" aria-label="{{proof_aria}}">
+      <div class="proof-intro reveal"><span>LISTENED WORLDWIDE</span><p>{{proof_intro}}</p></div>
+      <div class="proof-item reveal"><strong>1997</strong><span>{{proof_since}}</span></div>
+      <div class="proof-item reveal"><strong>100M+</strong><span>{{proof_streams}}</span></div>
+      <div class="proof-item reveal"><strong>20M+</strong><span>{{proof_track}}</span></div>
+    </section>
+
+    <section class="statement" aria-labelledby="statement-title">
+      <div class="section-index">00 / PHILOSOPHY</div>
+      <div class="statement-grid">
+        <h2 id="statement-title" class="reveal">{{statement_h2}}</h2>
+        <p class="reveal">{{statement_p}}</p>
+      </div>
+    </section>
+
+    <section class="works" id="works" aria-labelledby="works-title">
+      <div class="section-index">01 / SELECTED WORKS</div>
+      <div class="section-heading">
+        <h2 id="works-title" class="reveal">{{works_h2}}</h2>
+        <p class="reveal">{{works_p}}</p>
+      </div>
+      <div class="featured-grid">
+        <article class="feature feature-hero reveal">
+          <a class="feature-visual" aria-label="{{f1_aria}}" href="https://meltyblood.typelumina.com/" target="_blank" rel="noopener">
+            <img class="feature-art" src="/assets/work-melty-hires.jpg" alt="" loading="lazy" decoding="async" width="1920" height="1080">
+            <div class="feature-top"><span>01</span><span class="feature-open">{{official}}</span></div>
+            <div class="feature-body"><p>{{f1_cat}}</div>
+          </a>
+          <div class="feature-caption"><div>{{f1_roles}}</div>
+        </article>
+        <article class="feature feature-red reveal">
+          <a class="feature-visual" aria-label="{{f2_aria}}" href="https://www.arcsystemworks.fr/games/under-night-in-birth-ii/" target="_blank" rel="noopener">
+            <img class="feature-art" src="/assets/work-uni-web.webp" alt="" loading="lazy" decoding="async" width="1280" height="1410">
+            <div class="feature-top"><span>02</span><span class="feature-open">{{official}}</span></div>
+            <div class="feature-body"><p>{{f2_cat}}</div>
+          </a>
+          <div class="feature-caption"><div>{{f2_roles}}</div><span>2012—2024</span></div>
+        </article>
+        <article class="feature feature-blue reveal">
+          <a class="feature-visual" aria-label="{{f3_aria}}" href="https://www.arcsystemworks.jp/ddrev/" target="_blank" rel="noopener">
+            <img class="feature-art" src="/assets/work-double-dragon.jpg" alt="" loading="lazy" decoding="async" width="1800" height="1012">
+            <div class="feature-top"><span>03</span><span class="feature-open">{{official}}</span></div>
+            <div class="feature-body"><p>{{f3_cat}}</p><h3>DOUBLE DRAGON<br>REVIVE</h3></div>
+          </a>
+          <div class="feature-caption"><div>{{f3_roles}}</div>
+        </article>
+        <article class="feature feature-paper reveal">
+          <a class="feature-visual" aria-label="{{f4_aria}}" href="https://sk8-project.com/bddvd/" target="_blank" rel="noopener">
+            <img class="feature-art" src="/assets/work-sk8.jpg" alt="" loading="lazy" decoding="async" width="680" height="863">
+            <div class="feature-top"><span>04</span><span class="feature-open">{{official}}</span></div>
+            <div class="feature-body"><p>{{f4_cat}}</p><h3>SK8 THE INFINITY</h3></div>
+          </a>
+          <div class="feature-caption"><div>{{f4_roles}}</div>
+        </article>
+      </div>
+      <p class="artwork-note">{{artwork_note}}</p>
+
+      <details class="archive reveal">
+        <summary>{{archive_summary}}<i aria-hidden="true">+</i></summary>
+        {{archive_list}}
+      </details>
+      <a class="complete-index-link reveal" href="/works/">{{index_link}}<i aria-hidden="true">↗</i></a>
+    </section>
+
+    <section class="practice" aria-labelledby="practice-title">
+      <div class="section-index">02 / PRACTICE</div><h2 id="practice-title" class="reveal">{{practice_h2}}</h2>
+      <div class="practice-grid">
+        <article class="reveal"><span>01</span>{{p1}}</article>
+        <article class="reveal"><span>02</span>{{p2}}</article>
+        <article class="reveal"><span>03</span>{{p3}}</article>
+      </div>
+    </section>
+
+    <section class="profile" id="profile" aria-labelledby="profile-title">
+      <div class="section-index">03 / PROFILE</div>
+      <div class="profile-grid">
+        <div class="profile-lead">
+          <figure class="portrait reveal"><img src="/assets/raito-portrait-web.jpg" alt="{{portrait_alt}}" loading="lazy" decoding="async" width="2000" height="1500"><figcaption><span>RAITO / 来兎</span><span>NAHA, OKINAWA</span></figcaption></figure>
+        </div>
+        <div class="profile-copy reveal">
+          <h2 id="profile-title">{{profile_h2}}</h2>
+          <p>{{profile_p1}}</p>
+          <p>{{profile_p2}}</p>
+          <p>{{profile_p3}}</p>
+          <dl>
+            {{dl}}
+          </dl>
+          <a class="text-link" href="/press/?lang={{press_lang}}">{{press_link}}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools" id="tools" aria-labelledby="tools-title">
+      <div class="section-index">04 / BROWSER TOOLS</div>
+      <div class="section-heading"><h2 id="tools-title">{{tools_h2}}</h2><p>{{tools_p}}</p></div>
+      <div class="tool-list">
+        <a class="tool-entry" href="/{{tools_prefix}}tally/"><div>{{t1}} <b aria-hidden="true">↗</b></span></a>
+        <a class="tool-entry" href="/{{tools_prefix}}carve/"><div>{{t2}} <b aria-hidden="true">↗</b></span></a>
+        <a class="tool-entry" href="/{{tools_prefix}}keys/"><div>{{t3}} <b aria-hidden="true">↗</b></span></a>
+        <a class="tool-entry" href="/{{tools_prefix}}pitch/"><div>{{t4}} <b aria-hidden="true">↗</b></span></a>
+      </div>
+      <div class="app-actions">{{tools_links}}</div>
+    </section>
+
+    <aside class="domestic" aria-label="{{domestic_aria}}">{{domestic}}</aside>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="section-index">05 / CONTACT</div>
+      <h2 id="contact-title" class="reveal"><a href="mailto:contact@raito.studio">contact@<br>raito.studio <span aria-hidden="true">↗</span></a></h2>
+      <div class="socials reveal" aria-label="{{socials_aria}}">
+        <a href="https://x.com/lisa_rec" target="_blank" rel="noopener">X ↗</a><a href="https://www.youtube.com/@raitosound" target="_blank" rel="noopener">YouTube ↗</a>
+        <a href="https://open.spotify.com/artist/4gvNo6XIRTD2N0l75sY6II" target="_blank" rel="noopener">Spotify ↗</a><a href="https://raito-sound.bandcamp.com/" target="_blank" rel="noopener">Bandcamp ↗</a>
+        <a href="https://www.instagram.com/raito_sound/" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 RAITO.STUDIO</span>{{footer}}</footer>
+  <script src="/site.js" defer></script>
+</body>
+</html>

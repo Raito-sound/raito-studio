@@ -1,0 +1,88 @@
+"""One-off: turn the hand-written index.html into templates/home.html + content/i18n/home.en.json."""
+from pathlib import Path
+import json, re
+src = Path('index.html').read_text(encoding='utf-8')
+for a,b in [('href="works/"','href="/works/"'),('href="tools/"','href="/tools/"'),('href="press/?lang=en"','href="/press/?lang={{press_lang}}"'),
+            ('src="assets/','src="/assets/'),('href="tally/"','href="/{{tools_prefix}}tally/"'),('href="carve/"','href="/{{tools_prefix}}carve/"'),
+            ('href="keys/"','href="/{{tools_prefix}}keys/"'),('href="pitch/"','href="/{{tools_prefix}}pitch/"'),('href="ja/tools/"','href="/{{tools_alt_prefix}}tools/"'),
+            ('href="site.css','href="/site.css'),('href="favicon.svg"','href="/favicon.svg"'),('src="site.js"','src="/site.js"')]:
+    assert a in src, a
+    src = src.replace(a,b)
+src = src.replace('href="/tools/">All tools','href="/{{tools_prefix}}tools/">All tools')
+src = src.replace('<a href="#top" aria-current="page">Home</a><a href="/works/">Works</a><a href="/tools/">Tools</a>',
+                  '<a href="#top" aria-current="page">{{nav_home}}</a><a href="/{{tools_prefix}}works/">{{nav_works}}</a><a href="/{{tools_prefix}}tools/">{{nav_tools}}</a>')
+src = src.replace('<a href="#profile">Profile</a><a href="/press/?lang={{press_lang}}">Press</a>','<a href="#profile">{{nav_profile}}</a><a href="/press/?lang={{press_lang}}">{{nav_press}}</a>')
+en = {}
+def key(k, text):
+    global src
+    assert text in src, (k, text[:70])
+    src = src.replace(text, '{{'+k+'}}'); en[k] = text
+pairs = [
+ ('title','Raito (来兎) — Composer & Sound Designer from Okinawa'),
+ ('meta_description','Raito (来兎, Masaru Kuba) is a Japanese game composer and sound designer based in Okinawa, known for MELTY BLOOD, UNDER NIGHT IN-BIRTH, Double Dragon Revive and SK8 the Infinity.'),
+ ('og_title','Raito — Game music that lives beyond the game'),
+ ('og_description','Composer and sound designer from Okinawa. Writing fighting-game music since 1997; heard more than 100 million times worldwide.'),
+ ('tw_description','Composer and sound designer from Okinawa. Writing fighting-game music since 1997.'),
+ ('skip','Skip to content'),('nav_aria','Primary navigation'),
+ ('contact_label','Contact <span aria-hidden="true">↗</span></a>\n  </header>'),
+ ('eyebrow','Composer / Sound Designer — Okinawa, Japan'),
+ ('manifesto','Game music <br>that lives<br><em>beyond the game.</em>'),
+ ('selected_aria','Explore selected works'),('selected_label','<span>Selected works</span>'),
+ ('listen','Listen on Spotify <span aria-hidden="true">↗</span>'),
+ ('ticker_aria','Selected credits'),('proof_aria','Career highlights'),
+ ('proof_intro','Built in Okinawa.<br> Played everywhere.'),
+ ('proof_since','ACTIVE SINCE'),('proof_streams','TOTAL STREAMS'),('proof_track','ONE TRACK'),
+ ('statement_h2','The match ends.<br><em>The music doesn’t.</em>'),
+ ('statement_p','A game track has to move with the player, define a world in seconds, and still feel alive after thousands of loops. That is where Raito’s music begins.'),
+ ('works_h2','Sound with a life<br>of its own.'),
+ ('works_p','From fighting games to animation, Raito writes music clear enough to define a scene and strong enough to live beyond it.'),
+ ('f1_aria','MELTY BLOOD official website'),('f1_cat','FIGHTING GAME / SERIES</p><h3>MELTY BLOOD</h3>'),
+ ('f1_roles','<span>COMPOSER</span><span>ARRANGER</span></div><span>2003—2021</span>'),
+ ('f2_aria','UNDER NIGHT IN-BIRTH official website'),('f2_cat','FIGHTING GAME / SERIES</p><h3>UNDER NIGHT<br>IN-BIRTH</h3>'),
+ ('f2_roles','<span>MUSIC</span><span>SOUND EFFECTS</span>'),
+ ('f3_aria','Double Dragon Revive official website'),('f3_cat','GAME / ORIGINAL SOUNDTRACK'),
+ ('f3_roles','<span>COMPOSER</span><span>ARRANGER</span></div><span>2025</span>'),
+ ('f4_aria','SK8 the Infinity official website'),('f4_cat','TV ANIMATION / SCORE'),
+ ('f4_roles','<span>COMPOSER</span><span>ARRANGER</span></div><span>2021</span>'),
+ ('artwork_note','Promotional, package and jacket artwork © their respective rights holders. Shown to identify credited works.'),
+ ('archive_summary','<span>Full selected archive</span><b>15 CREDITS</b>'),
+ ('index_link','<span>Explore the complete works index</span><b>47 PROJECTS</b>'),
+ ('practice_h2','Music. Movement.<br>Memory.'),
+ ('p1','<h3>Game Music</h3><p>Stage themes, character themes and complete scores designed around play, pacing and repeat listening.</p>'),
+ ('p2','<h3>Anime Music</h3><p>Original score, theme-song composition and arrangement for animation and screen.</p>'),
+ ('p3','<h3>Sound Design</h3><p>Sound effects and sonic systems that make interaction feel immediate, readable and physical.</p>'),
+ ('portrait_alt','Composer and sound designer Raito'),
+ ('profile_h2','A long game,<br>played from Okinawa.'),
+ ('profile_p1','Raito (来兎) is a Japanese composer and sound designer based in Naha, Okinawa. He began writing game music in 1997 and is best known for the <i>MELTY BLOOD</i> and <i>UNDER NIGHT IN-BIRTH</i> series.'),
+ ('profile_p2','His work also includes <i>Double Dragon Revive</i>, the TV anime <i>SK8 the Infinity</i>, arrangements for <i>Fate/Grand Order</i>, and sound effects for <i>Indivisible</i>.'),
+ ('profile_p3','He founded Lisa-Rec Inc. in 2010 and continues to work from Okinawa.'),
+ ('dl','<div><dt>Based in</dt><dd>Naha, Okinawa, Japan</dd></div><div><dt>Active since</dt><dd>1997</dd></div>\n            <div><dt>Role</dt><dd>Composer / Sound Designer</dd></div><div><dt>Company</dt><dd><a href="https://lisa-rec.net/">Lisa-Rec Inc. ↗</a></dd></div>'),
+ ('press_link','Open press kit <span aria-hidden="true">↗</span>'),
+ ('tools_h2','Tools for words.<br>Tools for sound.'),
+ ('tools_p','Writing and audio tools by Raito. Open them in your browser and work with your own text and files.'),
+ ('t1','<span class="tool-category">TEXT EDITOR / ANALYZER</span><h3>TALLY</h3></div><p>Write Japanese text, count characters and check the rhythm of lyrics with mora analysis.</p><span class="tool-more">Explore TALLY'),
+ ('t2','<span class="tool-category">WAVE EDITOR</span><h3>CARVE</h3></div><p>Edit audio, shape fades, check loop seams and export WAV, OGG or MP3.</p><span class="tool-more">Explore CARVE'),
+ ('t3','<span class="tool-category">PIANO / ORGAN</span><h3>KEYS</h3></div><p>Play piano and organ, practice with a metronome and save short performances as MIDI or WAV.</p><span class="tool-more">Explore KEYS'),
+ ('t4','<span class="tool-category">INSTRUMENT TUNER</span><h3>PITCH</h3></div><p>Tune guitar, bass and other instruments with a clear cents meter, presets and reference tones.</p><span class="tool-more">Explore PITCH'),
+ ('tools_links','<a class="text-link" href="/{{tools_prefix}}tools/">All tools &amp; practical guides ↗</a><a class="text-link" href="/{{tools_alt_prefix}}tools/" lang="ja">日本語のツール紹介・使い方 ↗</a>'),
+ ('domestic_aria','Japanese commercial music inquiries'),
+ ('domestic','<span>FOR COMMERCIAL MUSIC IN JAPAN</span><a href="https://lisa-rec.net/">LISA-REC INC. <b aria-hidden="true">↗</b></a>'),
+ ('socials_aria','Raito on other platforms'),
+ ('footer','<span>COMPOSER / SOUND DESIGNER</span><a href="#top">BACK TO TOP ↑</a>'),
+]
+for k,t in pairs: key(k,t)
+src = src.replace('Official <b aria-hidden="true">↗</b>','{{official}}'); en['official']='Official <b aria-hidden="true">↗</b>'
+a0 = src.index('<div class="archive-list">'); a1 = src.index('</div>', src.index('GLOVE ON FIGHT')) + len('</div>')
+src = src[:a0] + '{{archive_list}}' + src[a1:]
+src = src.replace('<html lang="en">','<html lang="{{lang}}">')
+src = src.replace('  <link rel="canonical" href="https://raito.studio/">\n', '  {{alternates}}\n', 1)
+src = src.replace('<meta property="og:locale" content="en_US">','{{og_locale}}')
+src = src.replace('<meta property="og:url" content="https://raito.studio/">', '<meta property="og:url" content="{{url}}">')
+src = re.sub(r'  <script type="application/ld\+json">.*?</script>\n', '  {{jsonld}}\n', src, count=1, flags=re.S)
+src = src.replace('<a class="header-contact" href="#contact">{{contact_label}}','<div class="header-right">{{lang_switch}}<a class="header-contact" href="#contact">{{contact_label}}</a></div>\n  </header>')
+en['contact_label'] = 'Contact <span aria-hidden="true">↗</span>'
+src = src.replace("<script>document.documentElement.classList.add('js')</script>","<script>document.documentElement.classList.add('js')</script>\n  <script src=\"/lang.js\" defer></script>")
+for must in ['{{jsonld}}','{{alternates}}','{{lang_switch}}','{{archive_list}}','lang.js','{{og_locale}}']: assert must in src, must
+Path('templates/home.html').write_text(src, encoding='utf-8')
+Path('content/i18n/home.en.json').write_text(json.dumps(en, ensure_ascii=False, indent=1)+'\n', encoding='utf-8')
+print('template ok; keys:', len(en))

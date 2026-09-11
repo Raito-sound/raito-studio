@@ -19,7 +19,7 @@ PERSON = ORIGIN + '/#person'
 DATA = json.loads((ROOT / 'content' / 'works.json').read_text(encoding='utf-8'))
 WORKS = DATA['works']
 DATE = DATA['reviewed']
-CSS_V = 'works-20260911'
+CSS_V = 'lang-20260911'
 
 SAME_AS = [
     'https://lisa-rec.net/',
@@ -250,9 +250,9 @@ def render_work(w, lang, posts):
 <meta name="robots" content="index,follow,max-snippet:-1"><meta name="theme-color" content="#efede5">
 <meta property="og:type" content="article"><meta property="og:site_name" content="Raito.studio"><meta property="og:locale" content="{'ja_JP' if is_ja else 'en_US'}"><meta property="og:url" content="{url}"><meta property="og:title" content="{escape(doc_title, quote=True)}"><meta property="og:description" content="{escape(desc, quote=True)}"><meta property="og:image" content="{ORIGIN}/og-raito.png"><meta name="twitter:card" content="summary">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/site.css?v={CSS_V}"><link rel="stylesheet" href="/apps.css?v={CSS_V}">
-<script type="application/ld+json">{ld}</script></head>
+<script type="application/ld+json">{ld}</script><script src="/lang.js" defer></script></head>
 <body id="top" class="app-page work-page"><a class="skip-link" href="#main">{'本文へ' if is_ja else 'Skip to content'}</a>
-<header class="site-header"><a class="brand" href="/" aria-label="Raito.studio home"><img src="/assets/raito-logo.svg" alt="Raito / 来兎" width="84" height="44"></a><nav aria-label="{'メインナビゲーション' if is_ja else 'Primary navigation'}"><a href="/">Home</a><a href="{works_path}" aria-current="true">Works</a><a href="{'/ja/tools/' if is_ja else '/tools/'}">Tools</a><a href="/press/?lang={'ja' if is_ja else 'en'}">Press</a></nav><a class="header-contact" href="/#contact">Contact ↗</a></header>
+<header class="site-header"><a class="brand" href="/" aria-label="Raito.studio home"><img src="/assets/raito-logo.svg" alt="Raito / 来兎" width="84" height="44"></a><nav aria-label="{'メインナビゲーション' if is_ja else 'Primary navigation'}"><a href="/">Home</a><a href="{works_path}" aria-current="true">Works</a><a href="{'/ja/tools/' if is_ja else '/tools/'}">Tools</a><a href="/press/?lang={'ja' if is_ja else 'en'}">Press</a></nav><div class="header-right"><nav class="lang-switch" aria-label="Language"><a href="{path_for(w["slug"], "en")}" lang="en" hreflang="en" data-lang-switch="en"{"" if is_ja else cur}>EN</a><span aria-hidden="true">/</span><a href="{path_for(w["slug"], "ja")}" lang="ja" hreflang="ja" data-lang-switch="ja"{cur if is_ja else ""}>日本語</a></nav><a class="header-contact" href="{'/ja/#contact' if is_ja else '/#contact'}">{'お問い合わせ' if is_ja else 'Contact'} ↗</a></div></header>
 <main id="main" class="app-main">{body}</main>
 <footer><span>© 2026 RAITO.STUDIO</span><a href="{works_path}">{'作品一覧' if is_ja else 'ALL WORKS'}</a><a href="#top">{'ページ先頭へ' if is_ja else 'BACK TO TOP'} ↑</a></footer></body></html>
 '''
@@ -285,10 +285,10 @@ def render_ja_index():
 <meta name="robots" content="index,follow,max-snippet:-1"><meta name="theme-color" content="#efede5">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Raito.studio"><meta property="og:locale" content="ja_JP"><meta property="og:url" content="{url}"><meta property="og:title" content="{escape(doc_title, quote=True)}"><meta property="og:description" content="{escape(desc, quote=True)}"><meta property="og:image" content="{ORIGIN}/og-raito.png"><meta name="twitter:card" content="summary">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/site.css?v={CSS_V}"><link rel="stylesheet" href="/apps.css?v={CSS_V}">
-<script type="application/ld+json">{ld}</script></head>
+<script type="application/ld+json">{ld}</script><script src="/lang.js" defer></script></head>
 <body id="top" class="app-page work-page"><a class="skip-link" href="#main">本文へ</a>
-<header class="site-header"><a class="brand" href="/" aria-label="Raito.studio home"><img src="/assets/raito-logo.svg" alt="Raito / 来兎" width="84" height="44"></a><nav aria-label="メインナビゲーション"><a href="/">Home</a><a href="/ja/works/" aria-current="page">Works</a><a href="/ja/tools/">Tools</a><a href="/press/?lang=ja">Press</a></nav><a class="header-contact" href="/#contact">Contact ↗</a></header>
-<main id="main" class="app-main"><div class="tools-topline"><nav class="app-breadcrumb" aria-label="Breadcrumb"><a href="/">Raito.studio</a><span aria-hidden="true">/</span><span>Works</span></nav><nav class="language-links" aria-label="Language"><a href="/works/" lang="en" hreflang="en">English</a><span aria-hidden="true">/</span><a href="/ja/works/" lang="ja" hreflang="ja" aria-current="page">日本語</a></nav></div>
+<header class="site-header"><a class="brand" href="/" aria-label="Raito.studio home"><img src="/assets/raito-logo.svg" alt="Raito / 来兎" width="84" height="44"></a><nav aria-label="メインナビゲーション"><a href="/">Home</a><a href="/ja/works/" aria-current="page">Works</a><a href="/ja/tools/">Tools</a><a href="/press/?lang=ja">Press</a></nav><div class="header-right"><nav class="lang-switch" aria-label="言語"><a href="/works/" lang="en" hreflang="en" data-lang-switch="en">EN</a><span aria-hidden="true">/</span><a href="/ja/works/" lang="ja" hreflang="ja" data-lang-switch="ja" aria-current="page">日本語</a></nav><a class="header-contact" href="/ja/#contact">お問い合わせ ↗</a></div></header>
+<main id="main" class="app-main"><div class="tools-topline"><nav class="app-breadcrumb" aria-label="Breadcrumb"><a href="/ja/">Raito.studio</a><span aria-hidden="true">/</span><span>Works</span></nav><nav class="language-links" aria-label="Language"><a href="/works/" lang="en" hreflang="en">English</a><span aria-hidden="true">/</span><a href="/ja/works/" lang="ja" hreflang="ja" aria-current="page">日本語</a></nav></div>
 <section class="tools-intro"><p class="app-category">RAITO / WORKS</p><h1>来兎の作品一覧</h1><p class="app-lead">{escape(desc)}</p><p>{escape(PERSON_BLURB['ja'])}</p><a class="app-secondary" href="https://lisa-rec.net/#works">CM音楽・サウンドロゴ（150件以上、すべて来兎が作曲）は株式会社リサレコのサイトへ ↗</a></section>
 {sections}
 <p class="app-note">情報確認日: {DATE}。出典: 来兎の公表クレジットとプレスキット（2026年8月）。</p></main>
@@ -351,6 +351,11 @@ def patch_en_index():
     switch = '<nav class="language-links" aria-label="Language"><a href="/works/" lang="en" hreflang="en" aria-current="page">English</a><span aria-hidden="true">/</span><a href="/ja/works/" lang="ja" hreflang="ja">日本語</a></nav>'
     if 'class="language-links"' not in html:
         html = re.sub(r'(<span>\d{4}—\d{4}</span>)</div>', lambda m: m.group(1) + switch + '</div>', html, count=1)
+    header_switch = '<div class="header-right"><nav class="lang-switch" aria-label="Language"><a href="/works/" lang="en" hreflang="en" data-lang-switch="en" aria-current="page">EN</a><span aria-hidden="true">/</span><a href="/ja/works/" lang="ja" hreflang="ja" data-lang-switch="ja">日本語</a></nav><a class="header-contact" href="../#contact">Contact <span aria-hidden="true">↗</span></a></div>'
+    if 'class="lang-switch"' not in html:
+        html = html.replace('<a class="header-contact" href="../#contact">Contact <span aria-hidden="true">↗</span></a>', header_switch, 1)
+    if 'lang.js' not in html:
+        html = html.replace("<script>document.documentElement.classList.add('js')</script>", "<script>document.documentElement.classList.add('js')</script>\n  <script src=\"/lang.js\" defer></script>", 1)
 
     items = [{'@type': 'ListItem', 'position': i + 1, 'url': ORIGIN + path_for(w['slug'], 'en'),
               'item': {'@type': w['schema_type'], '@id': ORIGIN + f'/works/{w["slug"]}/#work', 'name': w['title_en'],
@@ -380,6 +385,7 @@ def patch_sitemap():
     path = ROOT / 'sitemap.xml'
     xml = path.read_text(encoding='utf-8')
     block = ['  <!-- works:start (generated by scripts/build-works-pages.py) -->']
+    block.append(f'  <url>\n    <loc>{ORIGIN}/ja/</loc>\n    <lastmod>{DATE}</lastmod>\n  </url>')
     block.append(f'  <url>\n    <loc>{ORIGIN}/ja/works/</loc>\n    <lastmod>{DATE}</lastmod>\n  </url>')
     for w in WORKS:
         for lang in ('en', 'ja'):
