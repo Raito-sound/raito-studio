@@ -62,7 +62,10 @@ def archive_list(lang):
 
 
 def strip_empty_headings(html):
-    return html.replace('<h2 id="practice-title" class="reveal"></h2>', '')
+    if '<h2 id="practice-title" class="reveal"></h2>' in html:
+        html = html.replace('<h2 id="practice-title" class="reveal"></h2>', '')
+        html = html.replace('aria-labelledby="practice-title"', 'aria-label="Practice"')
+    return html
 
 
 def render(lang):
