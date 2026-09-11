@@ -192,7 +192,7 @@
       "type": "game",
       "schema_type": "VideoGame",
       "featured": true,
-      "year": "2021",
+      "year": "2020",
       "year_end": "2025",
       "title_en": "Fate/Grand Order",
       "title_ja": "Fate/Grand Order",
@@ -200,21 +200,23 @@
         "Fate/Grand Order Original Soundtrack V",
         "FGO",
         "The Golden Path",
+        "The Burn Phase",
         "Iron Rose"
       ],
-      "roles_en": "Arranger / Guitar & synth arrangement",
-      "roles_ja": "編曲・ギター／シンセアレンジ",
+      "roles_en": "Composer & arranger (The Burn Phase) / Arranger (The Golden Path, Iron Rose)",
+      "roles_ja": "作曲・編曲（The Burn Phase）／編曲（The Golden Path、Iron Rose）",
       "role_keys": [
+        "composer",
         "arranger"
       ],
       "credited_as": "Raito",
       "client_en": "Aniplex",
       "client_ja": "アニプレックス",
       "official_url": "",
-      "did_en": "arranged “The Golden Path”, the theme song of the Fate/Grand Order Heian-kyō chapter (2020), and handled the guitar and synth arrangement and recording for the chapter; the track is included on Fate/Grand Order Original Soundtrack V (2021). In 2025 he provided arrangement support on “Iron Rose”. He is not the main composer of the game.",
-      "did_ja": "『Fate/Grand Order』平安京編の主題歌「The Golden Path」（2020年）の編曲と、同編のギター・シンセアレンジおよびレコーディングを担当しました。同曲は『Fate/Grand Order Original Soundtrack V』（2021年）に収録。2025年には「Iron Rose」のアレンジサポートを担当。ゲーム本編のメイン作曲者ではありません。",
-      "summary_en": "Arranger of “The Golden Path” (Heian-kyō chapter theme, on Original Soundtrack V) and arrangement support on “Iron Rose” (2025).",
-      "summary_ja": "平安京編主題歌「The Golden Path」の編曲（OST V収録）、「Iron Rose」アレンジサポート（2025年）。",
+      "did_en": "composed and arranged “The Burn Phase”, the TV-commercial song for the 2023 Servant Summer Festival event of Fate/Grand Order (Aniplex). He also arranged “The Golden Path”, the theme song of the Heian-kyō chapter (2020), handling the guitar and synth arrangement and recording; the track is included on Fate/Grand Order Original Soundtrack V (2021). In 2025 he provided arrangement support on “Iron Rose”. He is not the main composer of the game.",
+      "did_ja": "『Fate/Grand Order』2023年の「サーヴァント・サマーフェスティバル」TVCM曲「The Burn Phase」の作曲・編曲を担当しました。また、平安京編の主題歌「The Golden Path」（2020年）の編曲と、同編のギター・シンセアレンジおよびレコーディングを担当。同曲は『Fate/Grand Order Original Soundtrack V』（2021年）に収録。2025年には「Iron Rose」のアレンジサポートを担当。ゲーム本編のメイン作曲者ではありません。",
+      "summary_en": "Composer and arranger of “The Burn Phase” (2023 Summer Festival TV-CM song); arranger of “The Golden Path” (Heian-kyō chapter theme, on Original Soundtrack V) and arrangement support on “Iron Rose” (2025).",
+      "summary_ja": "「The Burn Phase」（2023年サバフェスTVCM曲）の作曲・編曲、平安京編主題歌「The Golden Path」の編曲（OST V収録）、「Iron Rose」アレンジサポート（2025年）。",
       "blog_keywords": [
         "Fate/Grand Order",
         "FGO"
