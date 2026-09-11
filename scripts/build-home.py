@@ -61,6 +61,10 @@ def archive_list(lang):
     return '<div class="archive-list">\n          ' + '\n          '.join(rows) + '\n        </div>'
 
 
+def strip_empty_headings(html):
+    return html.replace('<h2 id="practice-title" class="reveal"></h2>', '')
+
+
 def render(lang):
     strings = json.loads((ROOT / 'content' / 'i18n' / f'home.{lang}.json').read_text(encoding='utf-8'))
     url = ORIGIN + ('/' if lang == 'en' else '/ja/')
@@ -86,6 +90,7 @@ def render(lang):
     assert '{{' not in html, re.findall(r'\{\{[^}]+\}\}', html)[:5]
     dest = ROOT / ('index.html' if lang == 'en' else 'ja/index.html')
     dest.parent.mkdir(parents=True, exist_ok=True)
+    html = strip_empty_headings(html)
     dest.write_text(html, encoding='utf-8')
 
 
