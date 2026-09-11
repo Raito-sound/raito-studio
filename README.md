@@ -47,6 +47,16 @@ python3 scripts/build-home.py
 
 言語の振り分けは `lang.js`。初回訪問だけ `navigator.languages` で `/` か `/ja/` に振り分け、選択は `localStorage` の `site-lang` に保存する。クローラー・`?lang=` 付き・サイト内遷移・`navigator.webdriver` では振り分けない。全ページのヘッダーに EN／日本語 切替（`data-lang-switch`）があり、押すと選択が保存される。各ページは自己 canonical と hreflang（en / ja / x-default）を持つ。
 
+## 旧URLの転送（redirects）
+
+旧 WordPress（`/YYYY/MM/DD/slug/`）と旧 Wix（`/post/slug`、`/general-1`、`/portfolio-1/…`、`/ja/…`）のURLは検索結果に残っているため、`content/redirects.json`（旧パス → 新URL）から転送ページを生成している。GitHub Pages は 301 を返せないので、canonical + `meta refresh` + JS の静的スタブで代替する。
+
+```sh
+python3 scripts/build-redirects.py
+```
+
+作品に関係する旧記事は該当の `/works/<slug>/` へ、それ以外はトップか `/works/` へ送る。新しい旧URLが見つかったら JSON に1行足して再実行する。スタブは sitemap に載せない。
+
 ## 作品ページ（works）
 
 作品データの正本はサイト側では `content/works.json`（原本は Notion）。1作品 = 1URL で、英語 `/works/<slug>/` と日本語 `/ja/works/<slug>/` を生成する。
