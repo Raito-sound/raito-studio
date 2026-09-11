@@ -37,6 +37,16 @@ The app custom domains use HTTPS. Their Cloudflare CNAME records use DNS-only mo
 
 The introduction URLs and app URLs serve different purposes; neither redirects to the other. App updates are deployed from each app repository without copying the app into this portfolio.
 
+## トップページと日本語版（`/` と `/ja/`）
+
+トップは `templates/home.html` に `content/i18n/home.en.json` / `home.ja.json` を流し込んで生成する。文面を直すときは JSON を編集して再実行する（`index.html` と `ja/index.html` を直接編集しない）。
+
+```sh
+python3 scripts/build-home.py
+```
+
+言語の振り分けは `lang.js`。初回訪問だけ `navigator.languages` で `/` か `/ja/` に振り分け、選択は `localStorage` の `site-lang` に保存する。クローラー・`?lang=` 付き・サイト内遷移・`navigator.webdriver` では振り分けない。全ページのヘッダーに EN／日本語 切替（`data-lang-switch`）があり、押すと選択が保存される。各ページは自己 canonical と hreflang（en / ja / x-default）を持つ。
+
 ## 作品ページ（works）
 
 作品データの正本はサイト側では `content/works.json`（原本は Notion）。1作品 = 1URL で、英語 `/works/<slug>/` と日本語 `/ja/works/<slug>/` を生成する。
