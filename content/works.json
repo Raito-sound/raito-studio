@@ -2,7 +2,8 @@
   "reviewed": "2026-09-11",
   "sources": [
     "raito.studio complete works index (reviewed 2026-08-22)",
-    "来兎 プレスキット 2026-08 / Raito Press Kit 2026-08"
+    "来兎 プレスキット 2026-08 / Raito Press Kit 2026-08",
+    "案件台帳（Notion・2026年版）との突き合わせと本人回答（2026-09-11）"
   ],
   "works": [
     {
@@ -39,6 +40,36 @@
       "lisarec_title": "Double Dragon Revive"
     },
     {
+      "slug": "zeroranger-the-sea-has-returned",
+      "type": "game",
+      "schema_type": "MusicAlbum",
+      "featured": false,
+      "year": "2024",
+      "year_end": "",
+      "title_en": "ZeroRanger arrange album “The Sea Has Returned”",
+      "title_ja": "ZeroRanger アレンジアルバム「The Sea Has Returned」",
+      "alt_titles": [
+        "ZeroRanger"
+      ],
+      "roles_en": "Arranger",
+      "roles_ja": "編曲",
+      "role_keys": [
+        "arranger"
+      ],
+      "credited_as": "Raito",
+      "client_en": "System Erasure",
+      "client_ja": "System Erasure",
+      "official_url": "",
+      "did_en": "contributed an arrangement to “The Sea Has Returned”, the ZeroRanger arrange album (2024, System Erasure).",
+      "did_ja": "『ZeroRanger』のアレンジアルバム「The Sea Has Returned」（2024年、System Erasure）に編曲で参加しました。",
+      "summary_en": "Arrangement contribution to the ZeroRanger arrange album.",
+      "summary_ja": "ZeroRanger アレンジアルバムに編曲参加。",
+      "blog_keywords": [
+        "ZeroRanger"
+      ],
+      "lisarec_title": ""
+    },
+    {
       "slug": "raiden-iii-mikado-maniax",
       "type": "game",
       "schema_type": "VideoGame",
@@ -70,31 +101,120 @@
       "lisarec_title": ""
     },
     {
+      "slug": "yagate-chiriyuku-kagami-no-hana-e",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2023",
+      "year_end": "",
+      "title_en": "Yagate Chiriyuku Kagami no Hana e",
+      "title_ja": "やがて散りゆく鏡の花へ",
+      "alt_titles": [],
+      "roles_en": "Composer / Arranger / Lyricist / Vocal direction",
+      "roles_ja": "作曲・編曲・作詞・ディレクション",
+      "role_keys": [
+        "composer",
+        "arranger"
+      ],
+      "credited_as": "Raito",
+      "client_en": "Kogado Studio",
+      "client_ja": "工画堂スタジオ",
+      "official_url": "",
+      "did_en": "composed, arranged and wrote the lyrics of a vocal song for the adventure game Yagate Chiriyuku Kagami no Hana e (2023, Kogado Studio) and directed its vocal recording.",
+      "did_ja": "アドベンチャーゲーム『やがて散りゆく鏡の花へ』（2023年、工画堂スタジオ）のボーカル楽曲の作曲・編曲・作詞と、歌唱収録のディレクションを担当しました。",
+      "summary_en": "Vocal song: composition, arrangement, lyrics and vocal direction.",
+      "summary_ja": "ボーカル楽曲の作曲・編曲・作詞と歌唱ディレクション。",
+      "blog_keywords": [
+        "やがて散りゆく鏡の花へ"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "blackjack-gear",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2023",
+      "year_end": "",
+      "title_en": "Blackjack Gear",
+      "title_ja": "ブラックジャックギア",
+      "alt_titles": [],
+      "roles_en": "Composer / Sound Design",
+      "roles_ja": "作曲・サウンド制作",
+      "role_keys": [
+        "composer",
+        "sound"
+      ],
+      "credited_as": "Raito",
+      "client_en": "UNBALANCE",
+      "client_ja": "アンバランス",
+      "official_url": "",
+      "did_en": "produced the music and sound for Blackjack Gear (2023, UNBALANCE), an online card game combining trading-card play with blackjack, with a mechanical, loop-oriented sound inspired by its gear motif.",
+      "did_ja": "トレーディングカードゲームとブラックジャックを掛け合わせた対戦型オンラインカードゲーム『ブラックジャックギア』（2023年、アンバランス）の音楽とサウンドを制作しました。歯車のデザインから発想した、機械的でループを意識したサウンドです。",
+      "summary_en": "Music and sound for the blackjack game app.",
+      "summary_ja": "ブラックジャックゲームアプリの楽曲・サウンド制作。",
+      "blog_keywords": [
+        "ブラックジャックギア"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "gobblet-gobblers",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2022",
+      "year_end": "",
+      "title_en": "Gobblet Gobblers",
+      "title_ja": "ゴブレットゴブラーズ",
+      "alt_titles": [],
+      "roles_en": "Composer / Sound Effects",
+      "roles_ja": "作曲・効果音",
+      "role_keys": [
+        "composer",
+        "sfx"
+      ],
+      "credited_as": "Raito",
+      "client_en": "Sugorokuya",
+      "client_ja": "すごろくや",
+      "official_url": "",
+      "did_en": "composed the music and produced the sound effects for the app version of the board game Gobblet Gobblers (2022, Sugorokuya).",
+      "did_ja": "ボードゲーム『ゴブレットゴブラーズ』アプリ版（2022年、すごろくや）のBGMと効果音を制作しました。",
+      "summary_en": "Music and sound effects for the app version of the board game.",
+      "summary_ja": "アプリ版のBGMと効果音を制作。",
+      "blog_keywords": [
+        "ゴブレットゴブラーズ"
+      ],
+      "lisarec_title": ""
+    },
+    {
       "slug": "fate-grand-order",
       "type": "game",
       "schema_type": "VideoGame",
       "featured": true,
       "year": "2021",
-      "year_end": "",
+      "year_end": "2025",
       "title_en": "Fate/Grand Order",
       "title_ja": "Fate/Grand Order",
       "alt_titles": [
         "Fate/Grand Order Original Soundtrack V",
-        "FGO"
+        "FGO",
+        "The Golden Path",
+        "Iron Rose"
       ],
-      "roles_en": "Arranger",
-      "roles_ja": "編曲",
+      "roles_en": "Arranger / Guitar & synth arrangement",
+      "roles_ja": "編曲・ギター／シンセアレンジ",
       "role_keys": [
         "arranger"
       ],
       "credited_as": "Raito",
-      "client_en": "",
-      "client_ja": "",
+      "client_en": "Aniplex",
+      "client_ja": "アニプレックス",
       "official_url": "",
-      "did_en": "participated as an arranger in Fate/Grand Order Original Soundtrack V (2021). He is not the main composer of the game.",
-      "did_ja": "『Fate/Grand Order Original Soundtrack V』（2021年）に編曲で参加しました。ゲーム本編のメイン作曲者ではありません。",
-      "summary_en": "Participated as arranger in Fate/Grand Order Original Soundtrack V.",
-      "summary_ja": "『Fate/Grand Order Original Soundtrack V』に編曲で参加。",
+      "did_en": "arranged “The Golden Path”, the theme song of the Fate/Grand Order Heian-kyō chapter (2020), and handled the guitar and synth arrangement and recording for the chapter; the track is included on Fate/Grand Order Original Soundtrack V (2021). In 2025 he provided arrangement support on “Iron Rose”. He is not the main composer of the game.",
+      "did_ja": "『Fate/Grand Order』平安京編の主題歌「The Golden Path」（2020年）の編曲と、同編のギター・シンセアレンジおよびレコーディングを担当しました。同曲は『Fate/Grand Order Original Soundtrack V』（2021年）に収録。2025年には「Iron Rose」のアレンジサポートを担当。ゲーム本編のメイン作曲者ではありません。",
+      "summary_en": "Arranger of “The Golden Path” (Heian-kyō chapter theme, on Original Soundtrack V) and arrangement support on “Iron Rose” (2025).",
+      "summary_ja": "平安京編主題歌「The Golden Path」の編曲（OST V収録）、「Iron Rose」アレンジサポート（2025年）。",
       "blog_keywords": [
         "Fate/Grand Order",
         "FGO"
@@ -112,10 +232,12 @@
       "title_ja": "SK∞ エスケーエイト",
       "alt_titles": [
         "SK8 the Infinity Original Soundtrack",
-        "エスケーエイト"
+        "エスケーエイト",
+        "Dimensions of the Wind",
+        "Dimensions of the Wind -Langa ver.-"
       ],
-      "roles_en": "Composer / Arranger",
-      "roles_ja": "作曲・編曲",
+      "roles_en": "Composer / Arranger (co-written with MEG)",
+      "roles_ja": "作曲・編曲（MEGと共作）",
       "role_keys": [
         "composer",
         "arranger"
@@ -124,10 +246,10 @@
       "client_en": "Aniplex",
       "client_ja": "アニプレックス",
       "official_url": "https://sk8-project.com/",
-      "did_en": "composed and arranged the original soundtrack of the TV anime SK8 the Infinity (2021, Aniplex).",
-      "did_ja": "TVアニメ『SK∞ エスケーエイト』（2021年、アニプレックス）のオリジナルサウンドトラックの作曲・編曲を担当しました。",
-      "summary_en": "Composer and arranger for the original soundtrack of the TV anime SK8 the Infinity.",
-      "summary_ja": "TVアニメ『SK∞ エスケーエイト』オリジナルサウンドトラックの作曲・編曲を担当。",
+      "did_en": "co-composed and co-arranged with MEG the in-show song “Dimensions of the Wind” (performed by ASH DA HERO, lyrics by Konnie Aoki) for the TV anime SK8 the Infinity (2021, Aniplex). The song is Langa’s theme and is included on the original soundtrack; the series score itself is by Ryo Takahashi.",
+      "did_ja": "TVアニメ『SK∞ エスケーエイト』（2021年、アニプレックス）の劇中歌「Dimensions of the Wind」（歌：ASH DA HERO、作詞：Konnie Aoki）を、MEGと共同で作曲・編曲しました。ランガのテーマとして使われ、オリジナルサウンドトラックに収録されています。劇伴は高橋諒が担当。",
+      "summary_en": "Co-composer and co-arranger (with MEG) of “Dimensions of the Wind”, Langa’s in-show theme performed by ASH DA HERO, included on the original soundtrack.",
+      "summary_ja": "劇中歌「Dimensions of the Wind」（歌：ASH DA HERO、ランガのテーマ）をMEGと共同で作曲・編曲。オリジナルサウンドトラック収録。",
       "blog_keywords": [
         "SK∞",
         "SK8",
@@ -136,12 +258,48 @@
       "lisarec_title": "SK∞ エスケーエイト"
     },
     {
-      "slug": "kingdom-dash",
+      "slug": "skullgirls-umbrella",
       "type": "game",
       "schema_type": "VideoGame",
       "featured": false,
       "year": "2021",
       "year_end": "",
+      "title_en": "Skullgirls 2nd Encore / Skullgirls Mobile — Umbrella’s theme “Ice Cream Headache”",
+      "title_ja": "スカルガールズ 2ndアンコール／Skullgirls Mobile（アンブレラのテーマ曲「Ice Cream Headache」）",
+      "alt_titles": [
+        "Skullgirls",
+        "Skullgirls 2nd Encore",
+        "Skullgirls Mobile",
+        "Ice Cream Headache",
+        "スカルガールズ",
+        "アンブレラ"
+      ],
+      "roles_en": "Composer",
+      "roles_ja": "作曲",
+      "role_keys": [
+        "composer"
+      ],
+      "credited_as": "Raito",
+      "client_en": "",
+      "client_ja": "",
+      "official_url": "",
+      "did_en": "composed “Ice Cream Headache”, the character theme of Umbrella, the new fighter added in 2021 to Skullgirls 2nd Encore and Skullgirls Mobile.",
+      "did_ja": "対戦格闘ゲーム『スカルガールズ 2ndアンコール』とモバイル版『Skullgirls: 対戦型RPG』に2021年に追加された新キャラクター「アンブレラ」のテーマ曲「Ice Cream Headache」を作曲しました。",
+      "summary_en": "Composer of Umbrella’s character theme “Ice Cream Headache” for Skullgirls 2nd Encore and Skullgirls Mobile.",
+      "summary_ja": "アンブレラのテーマ曲「Ice Cream Headache」を作曲（2nd アンコール／モバイル版）。",
+      "blog_keywords": [
+        "スカルガールズ",
+        "Skullgirls"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "kingdom-dash",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2020",
+      "year_end": "2022",
       "title_en": "Kingdom DASH!!",
       "title_ja": "キングダム DASH!!",
       "alt_titles": [],
@@ -152,11 +310,11 @@
         "sfx"
       ],
       "credited_as": "Raito",
-      "client_en": "DLE Group",
-      "client_ja": "DLEグループ",
+      "client_en": "DLE Group (via Churapps)",
+      "client_ja": "DLEグループ（ちゅらっぷす経由）",
       "official_url": "",
-      "did_en": "composed the music and produced the sound effects for Kingdom DASH!! (2021, DLE Group), a game based on the manga Kingdom.",
-      "did_ja": "漫画『キングダム』を原作とするゲーム『キングダム DASH!!』（2021年、DLEグループ）のBGMと効果音を担当しました。",
+      "did_en": "composed the music and produced the sound effects for Kingdom DASH!! (DLE Group), a game based on the manga Kingdom, from its 2020 development through the first-anniversary music in 2022.",
+      "did_ja": "漫画『キングダム』を原作とするゲーム『キングダム DASH!!』（DLEグループ）のBGMと効果音を、2020年の開発から2022年の1周年楽曲まで担当しました。",
       "summary_en": "Music and sound effects for Kingdom DASH!!, a game based on the manga Kingdom.",
       "summary_ja": "『キングダム DASH!!』のBGMと効果音を担当。",
       "blog_keywords": [
@@ -188,7 +346,7 @@
       "client_en": "DLE / D-Techno",
       "client_ja": "DLE／ディ・テクノ",
       "official_url": "",
-      "did_en": "composed the music and produced the sound effects for BOFURI: Line Wars! (2020, DLE / D-Techno), the smartphone game based on the anime BOFURI.",
+      "did_en": "composed the music and produced the sound effects for BOFURI: Line Wars! (2020, DLE / D-Techno; developed under the codename “Aegis”), the smartphone game based on the anime BOFURI.",
       "did_ja": "アニメ『痛いのは嫌なので防御力に極振りしたいと思います。』を原作とするスマートフォンゲーム『～らいんうぉーず！～』（2020年、DLE／ディ・テクノ）のBGMと効果音を担当しました。",
       "summary_en": "Music and sound effects for the smartphone game based on the anime BOFURI.",
       "summary_ja": "スマートフォンゲーム『～らいんうぉーず！～』のBGMと効果音を担当。",
@@ -200,63 +358,91 @@
       "lisarec_title": "痛いのは嫌なので防御力に極振りしたいと思います。～らいんうぉーず！～"
     },
     {
-      "slug": "indivisible",
+      "slug": "kasukabe-runner-z",
       "type": "game",
       "schema_type": "VideoGame",
       "featured": false,
       "year": "2019",
       "year_end": "",
-      "title_en": "Indivisible",
-      "title_ja": "Indivisible",
+      "title_en": "Crayon Shin-chan: Kasukabe Runner Z",
+      "title_ja": "クレヨンしんちゃん カスカベランナーZ",
       "alt_titles": [],
-      "roles_en": "Sound Effects",
-      "roles_ja": "効果音",
+      "roles_en": "Composer / Sound Effects",
+      "roles_ja": "作曲・効果音",
       "role_keys": [
+        "composer",
         "sfx"
       ],
       "credited_as": "Raito",
-      "client_en": "Lab Zero Games",
-      "client_ja": "Lab Zero Games（米国）",
+      "client_en": "Bushiroad (via UniqueWave)",
+      "client_ja": "ブシロード（UniqueWave経由）",
       "official_url": "",
-      "did_en": "produced sound effects for Indivisible (2019), the action RPG by Lab Zero Games. He did not compose its music.",
-      "did_ja": "Lab Zero Games（米国）のアクションRPG『Indivisible』（2019年）の効果音制作を担当しました。楽曲の作曲は担当していません。",
-      "summary_en": "Sound effects production for Indivisible, the action RPG by Lab Zero Games.",
-      "summary_ja": "アクションRPG『Indivisible』の効果音制作を担当。",
+      "did_en": "produced the music and sound effects for the smartphone game Crayon Shin-chan: Kasukabe Runner Z (2019, Bushiroad).",
+      "did_ja": "スマートフォンゲーム『クレヨンしんちゃん カスカベランナーZ』（2019年、ブシロード）の楽曲と効果音を制作しました。",
+      "summary_en": "Music and sound effects for the smartphone game.",
+      "summary_ja": "スマートフォンゲームの楽曲・効果音を制作。",
       "blog_keywords": [
-        "Indivisible"
+        "カスカベランナーZ"
       ],
-      "lisarec_title": "Indivisible"
+      "lisarec_title": ""
     },
     {
-      "slug": "osomatsu-san-hesokuri-wars",
+      "slug": "asuka-120-burning-remixes",
+      "type": "game",
+      "schema_type": "MusicAlbum",
+      "featured": false,
+      "year": "2019",
+      "year_end": "",
+      "title_en": "Asuka 120% “BURNING Remixes”",
+      "title_ja": "あすか120%「BURNING Remixes」",
+      "alt_titles": [],
+      "roles_en": "Remixer",
+      "roles_ja": "リミックス",
+      "role_keys": [
+        "remixer"
+      ],
+      "credited_as": "Raito",
+      "client_en": "SuperSweep",
+      "client_ja": "スーパースィープ",
+      "official_url": "",
+      "did_en": "contributed one remix to Asuka 120% “BURNING Remixes” (2019, SuperSweep), the album marking the series’ 25th anniversary; the remix was later licensed for exA-Arcadia (2025).",
+      "did_ja": "『あすか120%』シリーズ25周年記念アルバム『あすか120% 〜BURNING Remixes〜』（2019年、スーパースィープ）に1曲リミックスで参加しました。同リミックスは2025年にexA-Arcadiaで二次使用されています。",
+      "summary_en": "Remix contribution, later used on exA-Arcadia.",
+      "summary_ja": "リミックス参加。後にexA-Arcadiaで二次使用。",
+      "blog_keywords": [
+        "あすか120"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "poptepipic-plus-plus",
       "type": "game",
       "schema_type": "VideoGame",
       "featured": false,
       "year": "2019",
       "year_end": "",
-      "title_en": "Mr. Osomatsu’s Hesokuri Wars",
-      "title_ja": "おそ松さんのへそくりウォーズ 〜ニートの攻防〜",
+      "title_en": "Pop Team Epic++ (Poputepipikku++ Popuko Pipimi no Yūjō Daisakusen)",
+      "title_ja": "ポプテピピック＋＋〜ポプ子ピピ美の友情大作戦〜",
       "alt_titles": [
-        "Osomatsu-san Hesokuri Wars",
-        "へそくりウォーズ"
+        "ポプテピピック++",
+        "ダンジョンオブポプテピピック"
       ],
-      "roles_en": "Composer / Arranger",
-      "roles_ja": "作曲・編曲",
+      "roles_en": "Composer / Sound Effects",
+      "roles_ja": "作曲・効果音",
       "role_keys": [
         "composer",
-        "arranger"
+        "sfx"
       ],
       "credited_as": "Raito",
-      "client_en": "DLE",
-      "client_ja": "DLE",
+      "client_en": "DLE (via Churapps)",
+      "client_ja": "DLE（ちゅらっぷす経由）",
       "official_url": "",
-      "did_en": "composed and arranged the original soundtrack of Mr. Osomatsu’s Hesokuri Wars (2019, DLE), continued through the game's later versions, and edited voice audio for the stage adaptation.",
-      "did_ja": "『おそ松さんのへそくりウォーズ 〜ニートの攻防〜』（2019年、DLE）のオリジナルサウンドトラックの作曲・編曲、続く各バージョン、舞台版の音声編集を担当しました。",
-      "summary_en": "Composer and arranger for the original soundtrack, successive game versions and voice editing for the stage adaptation.",
-      "summary_ja": "オリジナルサウンドトラックの作曲・編曲、続く各バージョン、舞台版の音声編集を担当。",
+      "did_en": "produced the music and sound effects for the smartphone game Pop Team Epic++ (2019, DLE).",
+      "did_ja": "スマートフォンゲーム『ポプテピピック＋＋〜ポプ子ピピ美の友情大作戦〜』（2019年、DLE）の音楽と効果音を制作しました。",
+      "summary_en": "Music and sound effects for the smartphone game.",
+      "summary_ja": "スマートフォンゲームの音楽と効果音を制作。",
       "blog_keywords": [
-        "へそくりウォーズ",
-        "おそ松さん"
+        "ポプテピピック"
       ],
       "lisarec_title": ""
     },
@@ -267,12 +453,13 @@
       "featured": false,
       "year": "2019",
       "year_end": "",
-      "title_en": "We Never Learn: BOKUBEN",
-      "title_ja": "ぼくたちは勉強ができない（Study 主題歌）",
+      "title_en": "We Never Learn: BOKUBEN — Study “ready STUDY go!”",
+      "title_ja": "ぼくたちは勉強ができない（Study「ready STUDY go!」）",
       "alt_titles": [
-        "Study「PROGRESSIVE」",
-        "Study「Can now, Can now」",
-        "ぼく勉"
+        "ready STUDY go!",
+        "PROGRESSIVE",
+        "ぼく勉",
+        "Study"
       ],
       "roles_en": "Composer / Arranger",
       "roles_ja": "作曲・編曲",
@@ -284,17 +471,48 @@
       "client_en": "Aniplex",
       "client_ja": "アニプレックス",
       "official_url": "",
-      "did_en": "composed and arranged “PROGRESSIVE” and “Can now, Can now” by Study, the theme-song unit of the TV anime We Never Learn: BOKUBEN (2019, Aniplex).",
-      "did_ja": "TVアニメ『ぼくたちは勉強ができない』主題歌ユニットStudyの「PROGRESSIVE」「Can now, Can now」（2019年、アニプレックス）を作曲・編曲しました。",
-      "summary_en": "Composer and arranger for “PROGRESSIVE” and “Can now, Can now” by Study.",
-      "summary_ja": "Study「PROGRESSIVE」「Can now, Can now」の作曲・編曲を担当。",
+      "did_en": "composed and arranged “ready STUDY go!”, the debut song of Study, the voice-actress unit of the TV anime We Never Learn: BOKUBEN (2019, Aniplex), released on the mini album PROGRESSIVE.",
+      "did_ja": "TVアニメ『ぼくたちは勉強ができない』の声優ユニットStudyのデビュー曲「ready STUDY go!」（2019年、アニプレックス。ミニアルバム『PROGRESSIVE』収録）を作曲・編曲しました。",
+      "summary_en": "Composer and arranger of “ready STUDY go!” by Study (mini album PROGRESSIVE).",
+      "summary_ja": "Study「ready STUDY go!」（ミニアルバム『PROGRESSIVE』収録）の作曲・編曲。",
       "blog_keywords": [
         "ぼくたちは勉強ができない",
         "ぼく勉",
         "PROGRESSIVE",
-        "Can now"
+        "ready STUDY go"
       ],
       "lisarec_title": "ぼくたちは勉強ができない（Study 主題歌）"
+    },
+    {
+      "slug": "kakegurui-app",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2018",
+      "year_end": "",
+      "title_en": "Kakegurui smartphone game",
+      "title_ja": "賭ケグルイ（スマートフォンゲーム）",
+      "alt_titles": [
+        "賭ケグルイ"
+      ],
+      "roles_en": "Composer / Sound Design",
+      "roles_ja": "作曲・サウンド制作",
+      "role_keys": [
+        "composer",
+        "sound"
+      ],
+      "credited_as": "Raito",
+      "client_en": "WizCorp",
+      "client_ja": "ウィズコープ",
+      "official_url": "",
+      "did_en": "produced the music and sound for a Kakegurui smartphone game (2018, WizCorp).",
+      "did_ja": "『賭ケグルイ』のスマートフォンゲーム（2018年、ウィズコープ）の楽曲とサウンドを制作しました。",
+      "summary_en": "Music and sound for the smartphone game.",
+      "summary_ja": "スマートフォンゲームの楽曲・サウンド制作。",
+      "blog_keywords": [
+        "賭ケグルイ"
+      ],
+      "lisarec_title": ""
     },
     {
       "slug": "blazblue-cross-tag-battle",
@@ -345,11 +563,11 @@
         "composer"
       ],
       "credited_as": "Raito",
-      "client_en": "",
-      "client_ja": "",
+      "client_en": "Gulti",
+      "client_ja": "ガルチ",
       "official_url": "",
-      "did_en": "composed music for the shoot ’em up RXN -Raijin- (2018).",
-      "did_ja": "シューティングゲーム『RXN -雷神-』（2018年）の楽曲を作曲しました。",
+      "did_en": "composed music for the shoot ’em up RXN -Raijin- (2018, Gulti).",
+      "did_ja": "シューティングゲーム『RXN -雷神-』（2018年、ガルチ）の楽曲を作曲しました。",
       "summary_en": "Music for the shoot ’em up RXN -Raijin-.",
       "summary_ja": "シューティングゲーム『RXN -雷神-』の楽曲を作曲。",
       "blog_keywords": [
@@ -390,6 +608,94 @@
       "lisarec_title": "斉木楠雄のΨ難 妄想暴走!Ψキックバトル"
     },
     {
+      "slug": "indivisible",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2017",
+      "year_end": "2019",
+      "title_en": "Indivisible",
+      "title_ja": "Indivisible",
+      "alt_titles": [],
+      "roles_en": "Sound Effects",
+      "roles_ja": "効果音",
+      "role_keys": [
+        "sfx"
+      ],
+      "credited_as": "Raito",
+      "client_en": "Lab Zero Games",
+      "client_ja": "Lab Zero Games（米国）",
+      "official_url": "",
+      "did_en": "produced sound effects for Indivisible (Lab Zero Games) from 2017 through its 2019 release. He did not compose its music.",
+      "did_ja": "Lab Zero Games（米国）のアクションRPG『Indivisible』の効果音制作を、2017年から2019年の発売まで担当しました。楽曲の作曲は担当していません。",
+      "summary_en": "Sound effects production for Indivisible, the action RPG by Lab Zero Games.",
+      "summary_ja": "アクションRPG『Indivisible』の効果音制作を担当。",
+      "blog_keywords": [
+        "Indivisible"
+      ],
+      "lisarec_title": "Indivisible"
+    },
+    {
+      "slug": "kemono-friends-pavilion",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2017",
+      "year_end": "2021",
+      "title_en": "Kemono Friends Pavilion",
+      "title_ja": "けものフレンズぱびりおん",
+      "alt_titles": [
+        "けもフレ ぱびりおん"
+      ],
+      "roles_en": "Composer / Sound Design",
+      "roles_ja": "作曲・サウンド制作",
+      "role_keys": [
+        "composer",
+        "sound"
+      ],
+      "credited_as": "Raito",
+      "client_en": "Bushiroad (via UniqueWave)",
+      "client_ja": "ブシロード（UniqueWave経由）",
+      "official_url": "",
+      "did_en": "composed the area music and produced sound for Kemono Friends Pavilion (Bushiroad) from 2017 to 2021, including the desert, ocean, snow-mountain, plains and attraction areas.",
+      "did_ja": "『けものフレンズぱびりおん』（ブシロード）の各エリア（さばく・かいよう・ゆきやま・へいげん・アトラクション）の楽曲とサウンドを、2017年から2021年まで制作しました。",
+      "summary_en": "Area music and sound from 2017 to 2021.",
+      "summary_ja": "各エリアの楽曲・サウンドを2017〜2021年に制作。",
+      "blog_keywords": [
+        "けものフレンズぱびりおん",
+        "けもフレ"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "saiki-k-dark-reunion",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2017",
+      "year_end": "",
+      "title_en": "The Disastrous Life of Saiki K.: Dark Reunion no Gyakushū",
+      "title_ja": "斉木楠雄のΨ難 ダークリユニオンの逆襲",
+      "alt_titles": [],
+      "roles_en": "Composer",
+      "roles_ja": "作曲",
+      "role_keys": [
+        "composer"
+      ],
+      "credited_as": "Raito",
+      "client_en": "Churapps",
+      "client_ja": "ちゅらっぷす",
+      "official_url": "",
+      "did_en": "composed the background music for the smartphone game The Disastrous Life of Saiki K.: Dark Reunion no Gyakushū (2017).",
+      "did_ja": "スマートフォンゲーム『斉木楠雄のΨ難 ダークリユニオンの逆襲』（2017年）のBGMを作曲しました。",
+      "summary_en": "Background music for the smartphone game.",
+      "summary_ja": "スマートフォンゲームのBGMを作曲。",
+      "blog_keywords": [
+        "ダークリユニオン"
+      ],
+      "lisarec_title": ""
+    },
+    {
       "slug": "voez",
       "type": "game",
       "schema_type": "VideoGame",
@@ -398,20 +704,24 @@
       "year_end": "",
       "title_en": "VOEZ",
       "title_ja": "VOEZ",
-      "alt_titles": [],
-      "roles_en": "Arranger",
-      "roles_ja": "編曲",
+      "alt_titles": [
+        "碧い陽炎",
+        "異世界の約束"
+      ],
+      "roles_en": "Composer / Arranger",
+      "roles_ja": "作曲・編曲",
       "role_keys": [
+        "composer",
         "arranger"
       ],
       "credited_as": "Raito",
-      "client_en": "",
-      "client_ja": "",
+      "client_en": "INSIDE SYSTEM",
+      "client_ja": "INSIDE SYSTEM",
       "official_url": "",
-      "did_en": "arranged one track featured in the rhythm game VOEZ (2017).",
-      "did_ja": "リズムゲーム『VOEZ』（2017年）収録曲1曲の編曲を担当しました。",
-      "summary_en": "Arrangement for a track featured in the rhythm game VOEZ.",
-      "summary_ja": "リズムゲーム『VOEZ』収録曲1曲の編曲を担当。",
+      "did_en": "composed “Aoi Kagerou” and “Isekai no Yakusoku” for The Legend of Dark Witch series; both songs were arranged for and included in the rhythm game VOEZ (2017).",
+      "did_ja": "『魔神少女』シリーズの楽曲「碧い陽炎」「異世界の約束」を作曲し、リズムゲーム『VOEZ』（2017年）収録用にアレンジしました。",
+      "summary_en": "Two songs from The Legend of Dark Witch series, “Aoi Kagerou” and “Isekai no Yakusoku”, arranged for and included in VOEZ.",
+      "summary_ja": "魔神少女の「碧い陽炎」「異世界の約束」をVOEZ収録用にアレンジ。",
       "blog_keywords": [
         "VOEZ"
       ],
@@ -450,19 +760,54 @@
       "lisarec_title": "オキナワノコワイハナシ 劇伴（TVドラマシリーズ）"
     },
     {
+      "slug": "osomatsu-san-hesokuri-wars",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2015",
+      "year_end": "2022",
+      "title_en": "Mr. Osomatsu’s Hesokuri Wars",
+      "title_ja": "おそ松さんのへそくりウォーズ 〜ニートの攻防〜",
+      "alt_titles": [
+        "Osomatsu-san Hesokuri Wars",
+        "へそくりウォーズ"
+      ],
+      "roles_en": "Composer / Arranger",
+      "roles_ja": "作曲・編曲",
+      "role_keys": [
+        "composer",
+        "arranger"
+      ],
+      "credited_as": "Raito",
+      "client_en": "DLE / Churapps",
+      "client_ja": "DLE／ちゅらっぷす",
+      "official_url": "",
+      "did_en": "composed and arranged the original soundtrack of Mr. Osomatsu’s Hesokuri Wars (DLE) and continued to write its monthly event music from 2015 to 2022, including the Ver.5.0 update and voice editing for the stage adaptation.",
+      "did_ja": "『おそ松さんのへそくりウォーズ 〜ニートの攻防〜』（DLE）のオリジナルサウンドトラックの作曲・編曲を担当し、2015年から2022年まで月次イベント楽曲を継続制作しました。Ver.5.0や舞台版の音声編集も担当。",
+      "summary_en": "Original soundtrack and monthly event music from 2015 to 2022; voice editing for the stage adaptation.",
+      "summary_ja": "オリジナルサウンドトラックと2015〜2022年の月次イベント楽曲、舞台版の音声編集。",
+      "blog_keywords": [
+        "へそくりウォーズ",
+        "おそ松さん"
+      ],
+      "lisarec_title": ""
+    },
+    {
       "slug": "dragonfang",
       "type": "game",
       "schema_type": "VideoGame",
       "featured": false,
       "year": "2015",
-      "year_end": "",
+      "year_end": "2017",
       "title_en": "DragonFang",
       "title_ja": "ドラゴンファング",
       "alt_titles": [
-        "DragonFang opening theme"
+        "DragonFang opening theme",
+        "ドラゴンファングZ",
+        "DragonFang Z"
       ],
-      "roles_en": "Composer / Voice Direction",
-      "roles_ja": "作曲（OP主題歌）・声優収録ディレクション",
+      "roles_en": "Composer (opening theme) / Voice casting & recording direction",
+      "roles_ja": "作曲（OP主題歌）・声優キャスティング・収録ディレクション",
       "role_keys": [
         "composer"
       ],
@@ -470,10 +815,10 @@
       "client_en": "Toydea",
       "client_ja": "トイディア",
       "official_url": "",
-      "did_en": "composed the opening theme of the roguelike RPG DragonFang (2015, Toydea) and directed its voice recording.",
-      "did_ja": "ローグライクRPG『ドラゴンファング』（2015年、トイディア）のOP主題歌を作曲し、声優収録のディレクションを担当しました。",
-      "summary_en": "Composed the opening theme for the roguelike RPG and directed the voice recording.",
-      "summary_ja": "OP主題歌の作曲と声優収録のディレクションを担当。",
+      "did_en": "composed the opening theme of the roguelike RPG DragonFang (2015, Toydea) and handled voice-actor casting and recording direction; for DragonFang Z (2017) he again handled voice production and casting.",
+      "did_ja": "ローグライクRPG『ドラゴンファング』（2015年、トイディア）のOP主題歌を作曲し、声優のキャスティングと収録ディレクションを担当しました。『ドラゴンファングZ』（2017年）でもボイス制作とキャスティングを担当。",
+      "summary_en": "Opening theme composer and voice casting/recording direction for DragonFang; voice production for DragonFang Z (2017).",
+      "summary_ja": "OP主題歌の作曲と声優キャスティング・収録ディレクション。『ドラゴンファングZ』（2017年）のボイス制作も担当。",
       "blog_keywords": [
         "ドラゴンファング",
         "DragonFang"
@@ -492,19 +837,20 @@
       "alt_titles": [
         "Crayon Shin-chan: Storm-Calling Flaming Kasukabe Runner!!"
       ],
-      "roles_en": "Sound Production",
-      "roles_ja": "サウンド制作",
+      "roles_en": "Composer / Sound Effects",
+      "roles_ja": "作曲（BGM・ジングル）・効果音",
       "role_keys": [
-        "sound"
+        "composer",
+        "sfx"
       ],
       "credited_as": "Raito",
-      "client_en": "",
-      "client_ja": "",
+      "client_en": "Bushiroad (via Applicalabo)",
+      "client_ja": "ブシロード（アプリカラボ経由）",
       "official_url": "",
-      "did_en": "handled sound production for the smartphone game Crayon Shin-chan: Kasukabe Runner!! (2014).",
-      "did_ja": "スマートフォンゲーム『クレヨンしんちゃん 嵐を呼ぶ炎のカスカベランナー!!』（2014年）のサウンド制作を担当しました。",
-      "summary_en": "Sound production for the smartphone game.",
-      "summary_ja": "スマートフォンゲームのサウンド制作を担当。",
+      "did_en": "composed the music and jingles and produced the sound effects for the smartphone game Crayon Shin-chan: Kasukabe Runner!! (2014, Bushiroad), including its battle mode.",
+      "did_ja": "スマートフォンゲーム『クレヨンしんちゃん 嵐を呼ぶ炎のカスカベランナー!!』（2014年、ブシロード）のBGM・ジングル・効果音を、対戦モードを含めて制作しました。",
+      "summary_en": "Music, jingles and sound effects for the smartphone game, including battle mode.",
+      "summary_ja": "BGM・ジングル・効果音（対戦モード含む）を制作。",
       "blog_keywords": [
         "カスカベランナー"
       ],
@@ -547,7 +893,7 @@
       "schema_type": "VideoGame",
       "featured": false,
       "year": "2014",
-      "year_end": "2020",
+      "year_end": "2024",
       "title_en": "The Legend of Dark Witch / Brave Dungeon",
       "title_ja": "魔神少女シリーズ / Brave Dungeon",
       "alt_titles": [
@@ -555,24 +901,169 @@
         "The Legend of Dark Witch series",
         "Brave Dungeon"
       ],
-      "roles_en": "Composer / Arranger",
-      "roles_ja": "作曲・編曲",
+      "roles_en": "Composer / Arranger / Sound Effects",
+      "roles_ja": "作曲・編曲・効果音",
       "role_keys": [
         "composer",
-        "arranger"
+        "arranger",
+        "sfx"
       ],
       "credited_as": "Raito",
       "client_en": "INSIDE SYSTEM",
       "client_ja": "INSIDE SYSTEM",
       "official_url": "",
-      "did_en": "composed and arranged music for The Legend of Dark Witch series and Brave Dungeon (2014–2020, INSIDE SYSTEM).",
-      "did_ja": "『魔神少女』シリーズおよび『Brave Dungeon』（2014〜2020年、INSIDE SYSTEM）の作曲・編曲を担当しました。",
-      "summary_en": "Composer and arranger for The Legend of Dark Witch series and Brave Dungeon from 2014 to 2020.",
-      "summary_ja": "『魔神少女』シリーズと『Brave Dungeon』の作曲・編曲を2014年から2020年まで担当。",
+      "did_en": "composed and arranged the music and produced the sound effects for The Legend of Dark Witch series and Brave Dungeon (INSIDE SYSTEM), from the 2014 original through The Legend of Dark Witch 4 in 2024.",
+      "did_ja": "『魔神少女』シリーズおよび『ブレイブダンジョン』（INSIDE SYSTEM）の作曲・編曲・効果音を、2014年の第1作から2024年の『魔神少女4 届ける想い』まで担当しました。",
+      "summary_en": "Music and sound effects for the series from 2014 to 2024.",
+      "summary_ja": "2014年から2024年までシリーズの楽曲と効果音を担当。",
       "blog_keywords": [
         "魔神少女",
         "Brave Dungeon",
         "Dark Witch"
+      ],
+      "lisarec_title": "",
+      "installments": [
+        {
+          "id": "dark-witch",
+          "name_en": "The Legend of Dark Witch",
+          "name_ja": "魔神少女",
+          "year": "2014",
+          "role_en": "Music, sound effects and image song",
+          "role_ja": "BGM・効果音・イメージソング"
+        },
+        {
+          "id": "dark-witch-2",
+          "name_en": "The Legend of Dark Witch 2",
+          "name_ja": "魔神少女2",
+          "year": "2014",
+          "role_en": "Music and sound effects",
+          "role_ja": "BGM・効果音"
+        },
+        {
+          "id": "dark-witch-3",
+          "name_en": "The Legend of Dark Witch 3",
+          "name_ja": "魔神少女 Episode 3",
+          "year": "2016",
+          "role_en": "Music",
+          "role_ja": "楽曲"
+        },
+        {
+          "id": "brave-dungeon",
+          "name_en": "Brave Dungeon",
+          "name_ja": "ブレイブダンジョン",
+          "year": "2016",
+          "role_en": "Music and sound effects (plus DLC music)",
+          "role_ja": "BGM・効果音（追加DLC楽曲を含む）"
+        },
+        {
+          "id": "brave-dungeon-justice",
+          "name_en": "Brave Dungeon: The Meaning of Justice",
+          "name_ja": "ブレイブダンジョン 正義の意味",
+          "year": "2018",
+          "role_en": "Music",
+          "role_ja": "BGM"
+        },
+        {
+          "id": "brave-dungeon-2",
+          "name_en": "Brave Dungeon 2",
+          "name_ja": "ブレイブダンジョン2",
+          "year": "2020",
+          "role_en": "Music and jingles",
+          "role_ja": "BGM・ジングル"
+        },
+        {
+          "id": "dark-witch-4",
+          "name_en": "The Legend of Dark Witch 4",
+          "name_ja": "魔神少女4 届ける想い",
+          "year": "2024",
+          "role_en": "Music",
+          "role_ja": "BGM"
+        }
+      ]
+    },
+    {
+      "slug": "darpan-zombie-factory",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2014",
+      "year_end": "",
+      "title_en": "Da-pan Zombie Factory",
+      "title_ja": "だーぱんゾンビ工場",
+      "alt_titles": [],
+      "roles_en": "Composer / Sound Effects",
+      "roles_ja": "作曲・効果音",
+      "role_keys": [
+        "composer",
+        "sfx"
+      ],
+      "credited_as": "Raito",
+      "client_en": "Mustache",
+      "client_ja": "マスタッシュ",
+      "official_url": "",
+      "did_en": "composed the music and produced the sound effects for Da-pan Zombie Factory (2014, Mustache).",
+      "did_ja": "『だーぱんゾンビ工場』（2014年、マスタッシュ）のBGMと効果音を制作しました。",
+      "summary_en": "Music and sound effects.",
+      "summary_ja": "BGMと効果音を制作。",
+      "blog_keywords": [
+        "だーぱん"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "various-monsters",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2013",
+      "year_end": "2015",
+      "title_en": "Various Monsters",
+      "title_ja": "ヴァリアスモンスターズ",
+      "alt_titles": [],
+      "roles_en": "Composer / Sound Effects",
+      "roles_ja": "作曲・効果音",
+      "role_keys": [
+        "composer",
+        "sfx"
+      ],
+      "credited_as": "Raito",
+      "client_en": "Applicalabo",
+      "client_ja": "アプリカラボ",
+      "official_url": "",
+      "did_en": "composed the event music and produced the sound effects for the smartphone game Various Monsters (Applicalabo) from 2013 to 2015.",
+      "did_ja": "スマートフォンゲーム『ヴァリアスモンスターズ』（アプリカラボ）のイベント楽曲と効果音を、2013年から2015年まで制作しました。",
+      "summary_en": "Event music and sound effects from 2013 to 2015.",
+      "summary_ja": "イベント楽曲と効果音を2013〜2015年に制作。",
+      "blog_keywords": [
+        "ヴァリアスモンスターズ"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "yuimaru-world",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2013",
+      "year_end": "",
+      "title_en": "Yuimaru☆World",
+      "title_ja": "ゆいまーる☆わーるど",
+      "alt_titles": [],
+      "roles_en": "Composer",
+      "roles_ja": "作曲",
+      "role_keys": [
+        "composer"
+      ],
+      "credited_as": "Raito",
+      "client_en": "Arcs",
+      "client_ja": "アークス",
+      "official_url": "",
+      "did_en": "composed the music for Yuimaru☆World (2013, Arcs).",
+      "did_ja": "『ゆいまーる☆わーるど』（2013年、アークス）の楽曲を作曲しました。",
+      "summary_en": "Music composition.",
+      "summary_ja": "楽曲を作曲。",
+      "blog_keywords": [
+        "ゆいまーる"
       ],
       "lisarec_title": ""
     },
@@ -672,7 +1163,10 @@
       "title_en": "Touhou Project arrangement works",
       "title_ja": "東方Project アレンジ参加作品群",
       "alt_titles": [
-        "東方アレンジ"
+        "東方アレンジ",
+        "東方玄夢妖譚",
+        "東方幻想魔録",
+        "東方幻想麻雀"
       ],
       "roles_en": "Composer / Arranger",
       "roles_ja": "作曲・編曲",
@@ -684,13 +1178,136 @@
       "client_en": "",
       "client_ja": "",
       "official_url": "",
-      "did_en": "composed and arranged tracks for Touhou Project related doujin works from 2012 to 2023.",
-      "did_ja": "東方Project関連の同人アレンジ作品群に、2012年から2023年まで作曲・編曲で参加しました。",
-      "summary_en": "Composer and arranger for Touhou Project related works from 2012 to 2023.",
-      "summary_ja": "東方Project関連のアレンジ作品群に2012年から2023年まで作曲・編曲で参加。",
+      "did_en": "composed and arranged music for Touhou Project fan games including Touhou Genmu Youtan and Touhou Gensou Maroku (Hachikuma Soft, 2012–2016) and Touhou Gensou Mahjong (EtlanZ, 2020), with further arrangements through 2023.",
+      "did_ja": "東方Projectの二次創作ゲーム『東方玄夢妖譚』『東方幻想魔録』（ハチクマソフト、2012〜2016年）、『東方幻想麻雀』（EtlanZ、2020年）などの作曲・編曲を、2023年まで手がけました。",
+      "summary_en": "Music for Touhou fan games by Hachikuma Soft (2012–2016) and EtlanZ (2020), and later arrangements.",
+      "summary_ja": "ハチクマソフト（2012〜2016年）、EtlanZ（2020年）などの東方二次創作ゲームの作曲・編曲。",
       "blog_keywords": [
         "東方Project",
         "東方アレンジ"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "bitter-and-sweet",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2012",
+      "year_end": "2013",
+      "title_en": "Bitter & Sweet",
+      "title_ja": "Bitter & Sweet",
+      "alt_titles": [],
+      "roles_en": "Composer / Sound Effects",
+      "roles_ja": "作曲（OP・BGM）・効果音",
+      "role_keys": [
+        "composer",
+        "sfx"
+      ],
+      "credited_as": "Raito",
+      "client_en": "SEEC",
+      "client_ja": "SEEC",
+      "official_url": "",
+      "did_en": "composed the opening theme and background music and produced the sound effects for Bitter & Sweet (2012–2013, SEEC).",
+      "did_ja": "『Bitter & Sweet』（2012〜2013年、SEEC）のOP・BGMの作曲と効果音制作を担当しました。",
+      "summary_en": "Opening theme, music and sound effects.",
+      "summary_ja": "OP・BGM・効果音。",
+      "blog_keywords": [
+        "Bitter & Sweet"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "makki-shoujobyou",
+      "type": "game",
+      "schema_type": "VideoGame",
+      "featured": false,
+      "year": "2012",
+      "year_end": "",
+      "title_en": "Makki, Shoujobyou — BGM “raison d’être”",
+      "title_ja": "末期、少女病 BGM「raison d'être」",
+      "alt_titles": [
+        "末期、少女病"
+      ],
+      "roles_en": "Composer",
+      "roles_ja": "作曲",
+      "role_keys": [
+        "composer"
+      ],
+      "credited_as": "Raito",
+      "client_en": "Silver Box",
+      "client_ja": "シルバーボックス",
+      "official_url": "",
+      "did_en": "composed the background music track “raison d’être” for Makki, Shoujobyou (2012, Silver Box).",
+      "did_ja": "『末期、少女病』（2012年、シルバーボックス）のBGM「raison d'être」を作曲しました。",
+      "summary_en": "Composer of the BGM “raison d’être”.",
+      "summary_ja": "BGM「raison d'être」を作曲。",
+      "blog_keywords": [
+        "末期、少女病"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "key-visualarts-anniversary-arrangements",
+      "type": "game",
+      "schema_type": "MusicAlbum",
+      "featured": false,
+      "year": "2012",
+      "year_end": "2015",
+      "title_en": "VisualArt’s / Key anniversary CD arrangements",
+      "title_ja": "ビジュアルアーツ／Key 記念CD アレンジ",
+      "alt_titles": [
+        "初恋と1/1 乙女髪 Try-Angle",
+        "Fertilizer"
+      ],
+      "roles_en": "Arranger",
+      "roles_ja": "編曲",
+      "role_keys": [
+        "arranger"
+      ],
+      "credited_as": "Raito",
+      "client_en": "VisualArt’s / Key",
+      "client_ja": "ビジュアルアーツ／Key",
+      "official_url": "",
+      "did_en": "arranged “Hatsukoi to 1/1 Otomegami Try-Angle” for the VisualArt’s 20th anniversary CD (2012) and “Fertilizer” for the Key 15th anniversary CD (2015).",
+      "did_ja": "ビジュアルアーツ20周年記念CDの「初恋と1/1 乙女髪 Try-Angle」（2012年）と、Key 15周年記念CDの「Fertilizer」（2015年）を編曲しました。",
+      "summary_en": "Arrangements for the VisualArt’s 20th and Key 15th anniversary CDs.",
+      "summary_ja": "ビジュアルアーツ20周年・Key 15周年記念CDのアレンジ。",
+      "blog_keywords": [
+        "ビジュアルアーツ",
+        "Fertilizer"
+      ],
+      "lisarec_title": ""
+    },
+    {
+      "slug": "haitai-nanafa",
+      "type": "animation",
+      "schema_type": "TVSeries",
+      "featured": false,
+      "year": "2012",
+      "year_end": "2017",
+      "title_en": "Haitai Nanafa — theme songs",
+      "title_ja": "はいたい七葉 主題歌",
+      "alt_titles": [
+        "はいたい七葉",
+        "glimmer of hope"
+      ],
+      "roles_en": "Composer / Arranger",
+      "roles_ja": "作曲・編曲",
+      "role_keys": [
+        "composer",
+        "arranger"
+      ],
+      "credited_as": "Raito",
+      "client_en": "",
+      "client_ja": "",
+      "official_url": "",
+      "did_en": "composed and arranged the theme songs of the Okinawan TV anime Haitai Nanafa (2012), its Blu-ray bonus CD (2014) and the opening and ending theme “glimmer of hope” of the game version (2017).",
+      "did_ja": "沖縄発のTVアニメ『はいたい七葉』の主題歌（2012年）、Blu-ray特典CD（2014年）、ゲーム版のOPおよびED「glimmer of hope」（2017年）の作曲・編曲を担当しました。",
+      "summary_en": "Theme songs for the TV anime (2012), Blu-ray bonus CD (2014) and game version (2017).",
+      "summary_ja": "TVアニメ版（2012年）、BD特典CD（2014年）、ゲーム版（2017年）の主題歌。",
+      "blog_keywords": [
+        "はいたい七葉"
       ],
       "lisarec_title": ""
     },

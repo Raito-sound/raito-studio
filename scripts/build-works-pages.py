@@ -301,34 +301,47 @@ def render_ja_index():
 
 # ---------- patches to existing files ----------
 
+INDEX_LABEL = {'game': 'GAME', 'animation': 'ANIMATION', 'drama': 'TV DRAMA', 'doujin': 'DOUJIN'}
+
+
+def index_entry(i, w):
+    cls = 'work-entry reveal' + (' featured' if w['featured'] else '')
+    label = INDEX_LABEL[w['type']] + (' / FEATURED' if w['featured'] else '')
+    search = ' '.join(x for x in [w['year'], w['year_end'], w['title_en'], w['title_ja'], w['client_en'], w['client_ja'], w['roles_en'], w['roles_ja'], INDEX_LABEL[w['type']].lower()] + w['alt_titles'] if x).lower()
+    small = f'<small lang="ja">{escape(w["title_ja"])}</small>' if w['title_ja'] != w['title_en'] else ''
+    client = f'<div><dt>Client</dt><dd>{escape(w["client_en"])}</dd></div>' if w['client_en'] else ''
+    return (f'        <article class="{cls}" data-category="{w["type"]}" data-search="{escape(search, quote=True)}">\n'
+            f'          <span class="work-no">{i:03d}</span><time datetime="{w["year"]}">{w["year"]}</time>'
+            f'<div class="work-title"><span>{label}</span><h3><a href="{path_for(w["slug"], "en")}">{escape(w["title_en"])}</a></h3>{small}</div>'
+            f'<p>{escape(w["summary_en"])}</p><dl><div><dt>Role</dt><dd>{escape(w["roles_en"])}</dd></div>{client}</dl>\n'
+            f'        </article>\n')
+
+
 def patch_en_index():
+    """Regenerate the list, counts and JSON-LD of works/index.html from works.json (the hero copy stays hand-written)."""
     path = ROOT / 'works' / 'index.html'
     html = path.read_text(encoding='utf-8')
-    by_title = {w['title_en']: w for w in WORKS}
-    missing = []
+    n = len(WORKS)
+    counts = {k: sum(1 for w in WORKS if w['type'] == k) for k in INDEX_LABEL}
+    years = sorted(int(w['year']) for w in WORKS)
+    latest = max(int(w['year_end'] or w['year']) for w in WORKS)
 
-    def link(m):
-        text = m.group(1)
-        w = by_title.get(unescape(text))
-        if not w:
-            missing.append(text)
-            return m.group(0)
-        return f'<h3><a href="{path_for(w["slug"], "en")}">{text}</a></h3>'
-    html = re.sub(r'<h3>(?!<a )([^<]+)</h3>', link, html)
-    if missing:
-        raise SystemExit(f'works index titles without a works.json record: {missing}')
+    entries = ''.join(index_entry(i + 1, w) for i, w in enumerate(WORKS))
+    html, c = re.subn(r'(<div class="works-list" id="works-list">\n).*?(\s*<p class="empty-state")', lambda m: m.group(1) + entries + m.group(2), html, count=1, flags=re.S)
+    assert c == 1, 'works-list block not found'
 
-    # keep each entry's description and role in step with works.json
-    for w in WORKS:
-        pat = re.compile(r'(<h3><a href="' + re.escape(path_for(w['slug'], 'en')) + r'">.*?</div>)<p>.*?</p>(<dl><div><dt>Role</dt><dd>).*?(</dd>)', re.S)
-        def sync(m, w=w):
-            current = m.group(0)
-            body = re.search(r'</div><p>(.*?)</p>', current, re.S).group(1)
-            para = body if unescape(re.sub(r'<[^>]+>', '', body)) == w['summary_en'] else escape(w['summary_en'])
-            return m.group(1) + '<p>' + para + '</p>' + m.group(2) + escape(w['roles_en']) + m.group(3)
-        html, n = pat.subn(sync, html, count=1)
-        if n != 1:
-            raise SystemExit(f'could not sync index entry for {w["slug"]}')
+    html = re.sub(r'<strong>\d+</strong><span>PROJECT RECORDS</span>', f'<strong>{n}</strong><span>PROJECT RECORDS</span>', html)
+    html = re.sub(r'<span>\d{4}—\d{4}</span>', f'<span>{years[0]}—{latest}</span>', html, count=1)
+    for key, name in [('game', 'Game'), ('animation', 'Animation'), ('drama', 'Drama'), ('doujin', 'Doujin')]:
+        html = re.sub(rf'<dt>{name}</dt><dd>\d+</dd>', f'<dt>{name}</dt><dd>{counts[key]}</dd>', html)
+        html = re.sub(rf'(data-filter="{key}" aria-pressed="false">{name} <span>)\d+', lambda m: m.group(1) + str(counts[key]), html)
+    html = re.sub(r'(data-filter="all" aria-pressed="true">All <span>)\d+', lambda m: m.group(1) + str(n), html)
+    html = re.sub(r'<p id="result-count" aria-live="polite">\d+ projects shown</p>', f'<p id="result-count" aria-live="polite">{n} projects shown</p>', html)
+    html = re.sub(r'content="\d+ game, animation, drama and doujin projects', f'content="{n} game, animation, drama and doujin projects', html)
+    html = html.replace('Raito (来兎) is an Okinawa-based composer and sound designer active since 1997.',
+                        'Raito (来兎, real name Masaru Kuba) is a Japanese composer and sound designer based in Okinawa, active in game music since 1997.')
+    html = html.replace('content="The complete works index of Okinawa-based composer and sound designer Raito, covering',
+                        'content="The complete works index of Japanese composer and sound designer Raito (来兎), based in Okinawa, covering')
 
     alternates = ('<link rel="canonical" href="https://raito.studio/works/">'
                   '<link rel="alternate" hreflang="en" href="https://raito.studio/works/">'
@@ -337,11 +350,7 @@ def patch_en_index():
     html = re.sub(r'<link rel="canonical" href="https://raito.studio/works/">(<link rel="alternate"[^>]*>)*', alternates, html, count=1)
     switch = '<nav class="language-links" aria-label="Language"><a href="/works/" lang="en" hreflang="en" aria-current="page">English</a><span aria-hidden="true">/</span><a href="/ja/works/" lang="ja" hreflang="ja">日本語</a></nav>'
     if 'class="language-links"' not in html:
-        html = html.replace('<span>2002—2025</span></div>', f'<span>2002—2025</span>{switch}</div>', 1)
-    html = html.replace('Raito (来兎) is an Okinawa-based composer and sound designer active since 1997.',
-                        'Raito (来兎, real name Masaru Kuba) is a Japanese composer and sound designer based in Okinawa, active in game music since 1997.')
-    html = html.replace('content="The complete works index of Okinawa-based composer and sound designer Raito, covering',
-                        'content="The complete works index of Japanese composer and sound designer Raito (来兎), based in Okinawa, covering')
+        html = re.sub(r'(<span>\d{4}—\d{4}</span>)</div>', lambda m: m.group(1) + switch + '</div>', html, count=1)
 
     items = [{'@type': 'ListItem', 'position': i + 1, 'url': ORIGIN + path_for(w['slug'], 'en'),
               'item': {'@type': w['schema_type'], '@id': ORIGIN + f'/works/{w["slug"]}/#work', 'name': w['title_en'],
@@ -352,11 +361,18 @@ def patch_en_index():
             'name': 'Complete Works — Raito / 来兎',
             'description': 'The complete published project index of Japanese composer and sound designer Raito (来兎), based in Okinawa.',
             'inLanguage': 'en', 'dateModified': DATE, 'about': {'@id': PERSON}, 'isPartOf': {'@id': ORIGIN + '/#website'},
-            'mainEntity': {'@type': 'ItemList', 'name': 'Raito complete works index', 'numberOfItems': len(WORKS),
+            'mainEntity': {'@type': 'ItemList', 'name': 'Raito complete works index', 'numberOfItems': n,
                            'itemListOrder': 'https://schema.org/ItemListOrderDescending', 'itemListElement': items}}
     ld = '<script type="application/ld+json">\n  ' + json.dumps(data, ensure_ascii=False, indent=2).replace('\n', '\n  ').replace('</', '<\\/') + '\n  </script>'
-    html, n = re.subn(r'<script type="application/ld\+json">.*?</script>', lambda m: ld, html, count=1, flags=re.S)
-    assert n == 1
+    html, c = re.subn(r'<script type="application/ld\+json">.*?</script>', lambda m: ld, html, count=1, flags=re.S)
+    assert c == 1
+    path.write_text(html, encoding='utf-8')
+
+
+def patch_homepage():
+    path = ROOT / 'index.html'
+    html = path.read_text(encoding='utf-8')
+    html = re.sub(r'<b>\d+ PROJECTS</b>', f'<b>{len(WORKS)} PROJECTS</b>', html)
     path.write_text(html, encoding='utf-8')
 
 
@@ -421,6 +437,7 @@ def build():
             render_work(w, lang, posts)
     render_ja_index()
     patch_en_index()
+    patch_homepage()
     patch_sitemap()
     patch_llms()
     linked = export_lisarec_links() if LISAREC.is_dir() else 0
