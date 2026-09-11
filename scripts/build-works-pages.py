@@ -30,7 +30,7 @@ SAME_AS = [
     'https://x.com/lisa_rec',
     'https://www.youtube.com/@raitosound',
     'https://www.instagram.com/raito_sound/',
-    'https://open.spotify.com/artist/6UunbAVLWAebLi1UB7GyXk',
+    'https://open.spotify.com/artist/4gvNo6XIRTD2N0l75sY6II',
     'https://raito-sound.bandcamp.com/',
 ]
 
@@ -135,6 +135,10 @@ def work_node(w):
         node[key] = {'@type': 'Organization', 'name': w['client_en']}
     if w['official_url']:
         node['url'] = w['official_url']
+    if w.get('installments'):
+        node['hasPart'] = [{'@type': w['schema_type'], '@id': ORIGIN + f'/works/{w["slug"]}/#{i["id"]}', 'name': i['name_en'],
+                            'datePublished': i['year'], 'musicBy': {'@id': PERSON}, 'contributor': {'@id': PERSON},
+                            'description': f'{i["role_en"]} by Raito (来兎).'} for i in w['installments']]
     musical = {'composer', 'arranger', 'remixer'} & set(w['role_keys'])
     if musical and w['schema_type'] in ('VideoGame', 'TVSeries'):
         node['musicBy'] = {'@id': PERSON}
@@ -149,11 +153,15 @@ def faq(w, lang):
                  (f'What was Raito’s role on {w["title_en"]}?', f'{w["roles_en"]}. {w["summary_en"]} Credited as {w["credited_as"]}.')]
         if w['year_end']:
             items.append((f'Which years does the credit cover?', f'{w["year"]} to {w["year_end"]}.'))
+        for i in w.get('installments', []):
+            items.append((f'Who did the music for {i["name_en"]}?', f'{i["role_en"]} of {i["name_en"]} ({i["year"]}) by Raito (来兎, Masaru Kuba).'))
     else:
         items = [(f'『{w["title_ja"]}』の音楽は誰が担当しましたか？', credit_sentence(w, 'ja')),
                  ('来兎の担当範囲は？', f'{w["roles_ja"]}。{w["summary_ja"]}クレジット表記は {w["credited_as"]}。')]
         if w['year_end']:
             items.append(('担当した期間は？', f'{w["year"]}年から{w["year_end"]}年まで。'))
+        for i in w.get('installments', []):
+            items.append((f'『{i["name_ja"]}』の音楽は誰が担当しましたか？', f'『{i["name_ja"]}』（{i["year"]}年）の{i["role_ja"]}を来兎（久場 超）が担当しました。'))
     return items
 
 
@@ -198,6 +206,10 @@ def render_work(w, lang, posts):
 
     faq_html = ''.join(f'<div><dt>{escape(q)}</dt><dd>{escape(a)}</dd></div>' for q, a in faq_items)
 
+    inst_html = ''
+    if w.get('installments'):
+        rows = ''.join(f'<div id="{i["id"]}"><dt>{escape(i["name_ja"] if is_ja else i["name_en"])} <small>{i["year"]}</small></dt><dd>{escape(i["role_ja"] if is_ja else i["role_en"])}</dd></div>' for i in w['installments'])
+        inst_html = f'<section class="app-detail" id="entries"><h2>{"シリーズ各作の担当" if is_ja else "Series entries and credits"}</h2><dl class="app-features">{rows}</dl></section>'
     hits, total = related_posts(w, posts)
     posts_html = ''
     if hits:
@@ -223,7 +235,7 @@ def render_work(w, lang, posts):
 <section class="app-hero"><div><p class="app-category">{cat}</p><h1>{escape(t)}</h1><p class="app-lead">{escape(credit_sentence(w, lang))}</p></div><div class="app-summary"><p>{escape(PERSON_BLURB[lang])}</p><div class="app-actions">{actions}</div></div></section>
 <dl class="app-facts">{facts_html}</dl>
 <section class="app-detail"><h2>{'担当内容' if is_ja else 'Credit details'}</h2><p class="reading-copy">{escape(credit_detail)}</p></section>
-<section class="app-detail"><h2>{'よくある質問' if is_ja else 'Questions'}</h2><dl class="app-features">{faq_html}</dl></section>
+{inst_html}<section class="app-detail"><h2>{'よくある質問' if is_ja else 'Questions'}</h2><dl class="app-features">{faq_html}</dl></section>
 {posts_html}
 <p class="app-note">{escape(source_note)}</p>
 </article>
@@ -305,6 +317,18 @@ def patch_en_index():
     html = re.sub(r'<h3>(?!<a )([^<]+)</h3>', link, html)
     if missing:
         raise SystemExit(f'works index titles without a works.json record: {missing}')
+
+    # keep each entry's description and role in step with works.json
+    for w in WORKS:
+        pat = re.compile(r'(<h3><a href="' + re.escape(path_for(w['slug'], 'en')) + r'">.*?</div>)<p>.*?</p>(<dl><div><dt>Role</dt><dd>).*?(</dd>)', re.S)
+        def sync(m, w=w):
+            current = m.group(0)
+            body = re.search(r'</div><p>(.*?)</p>', current, re.S).group(1)
+            para = body if unescape(re.sub(r'<[^>]+>', '', body)) == w['summary_en'] else escape(w['summary_en'])
+            return m.group(1) + '<p>' + para + '</p>' + m.group(2) + escape(w['roles_en']) + m.group(3)
+        html, n = pat.subn(sync, html, count=1)
+        if n != 1:
+            raise SystemExit(f'could not sync index entry for {w["slug"]}')
 
     alternates = ('<link rel="canonical" href="https://raito.studio/works/">'
                   '<link rel="alternate" hreflang="en" href="https://raito.studio/works/">'

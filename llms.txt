@@ -73,7 +73,7 @@ The canonical works list is https://raito.studio/works/ (English) and https://ra
 - Higurashi: When They Cry image albums (2006–2007) — Composer / Arranger: https://raito.studio/works/higurashi-image-albums/ · 日本語: https://raito.studio/ja/works/higurashi-image-albums/
 - Ragnarok Battle Offline (2005–2006) — Composer / Arranger: https://raito.studio/works/ragnarok-battle-offline/ · 日本語: https://raito.studio/ja/works/ragnarok-battle-offline/
 - Lamune — opening theme (2005) — Composer: https://raito.studio/works/lamune/ · 日本語: https://raito.studio/ja/works/lamune/
-- MELTY BLOOD series (2003–2021) — Composer / Arranger: https://raito.studio/works/melty-blood/ · 日本語: https://raito.studio/ja/works/melty-blood/
+- MELTY BLOOD series (2003–2021) — Composer / Arranger / Sound Effects: https://raito.studio/works/melty-blood/ · 日本語: https://raito.studio/ja/works/melty-blood/
 - GLOVE ON FIGHT (2002) — Composer / Arranger: https://raito.studio/works/glove-on-fight/ · 日本語: https://raito.studio/ja/works/glove-on-fight/
 
 ## Browser tools
@@ -99,7 +99,7 @@ The canonical works list is https://raito.studio/works/ (English) and https://ra
 - Press and international commissions: contact@raito.studio
 - X: https://x.com/lisa_rec
 - YouTube: https://www.youtube.com/@raitosound
-- Spotify: https://open.spotify.com/artist/6UunbAVLWAebLi1UB7GyXk
+- Spotify: https://open.spotify.com/artist/4gvNo6XIRTD2N0l75sY6II
 - Bandcamp: https://raito-sound.bandcamp.com/
 - Instagram: https://www.instagram.com/raito_sound/
 

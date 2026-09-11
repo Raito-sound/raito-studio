@@ -59,7 +59,7 @@ Raito has kept his company in Naha, Okinawa since 2010, winning three regional a
 | Websites | raito.studio (personal) / lisa-rec.net (company) |
 | Press contact | contact@raito.studio |
 
-**Links** — X: https://x.com/lisa_rec ｜ YouTube: https://www.youtube.com/@raitosound ｜ Spotify: https://open.spotify.com/artist/6UunbAVLWAebLi1UB7GyXk ｜ Bandcamp: https://raito-sound.bandcamp.com/ ｜ Instagram: https://www.instagram.com/raito_sound/
+**Links** — X: https://x.com/lisa_rec ｜ YouTube: https://www.youtube.com/@raitosound ｜ Spotify: https://open.spotify.com/artist/4gvNo6XIRTD2N0l75sY6II ｜ Bandcamp: https://raito-sound.bandcamp.com/ ｜ Instagram: https://www.instagram.com/raito_sound/
 
 ---
 
