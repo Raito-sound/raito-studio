@@ -36,3 +36,15 @@ The app custom domains use HTTPS. Their Cloudflare CNAME records use DNS-only mo
 - `pitch.raito.studio` → `custom-domains.chatgpt.site`
 
 The introduction URLs and app URLs serve different purposes; neither redirects to the other. App updates are deployed from each app repository without copying the app into this portfolio.
+
+## 作品ページ（works）
+
+作品データの正本はサイト側では `content/works.json`（原本は Notion）。1作品 = 1URL で、英語 `/works/<slug>/` と日本語 `/ja/works/<slug>/` を生成する。
+
+```sh
+python3 scripts/build-works-pages.py
+```
+
+このコマンドが、作品ページ58本、日本語一覧 `/ja/works/`、英語一覧のリンクと JSON-LD、`sitemap.xml` の works ブロック、`llms.txt` の作品節、隣の `lisarec/content/work-links.json`（ブログと実績一覧からの逆リンク用）を更新する。slug は公開後に変えない。新作は `works.json` に1件足して再実行するだけでよい。
+
+各ページの先頭の一文は「作品名（年・発注元）を、作曲家・来兎（Raito／久場超）が◯◯を担当」の形で固定し、役割は正確に書く（編曲参加を作曲と書かない）。

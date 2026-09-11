@@ -1,6 +1,6 @@
 # Raito (来兎) — Composer and Sound Designer
 
-Information reviewed: 2026-08-22
+Information reviewed: 2026-09-11
 
 > Raito (来兎, read “rai-to”; legal name Masaru Kuba / 久場 超) is a Japanese composer and sound designer based in Naha, Okinawa. He has written game music since 1997 and is known for the MELTY BLOOD and UNDER NIGHT IN-BIRTH series. His catalog has passed 100 million streams worldwide.
 
@@ -44,7 +44,37 @@ Information reviewed: 2026-08-22
 
 ## Complete works data
 
-The canonical human-readable and machine-readable project list is published at https://raito.studio/works/. It currently contains 29 public project records: 20 games, 5 animation projects, 2 television drama projects and 2 doujin projects. Each record states the year, English and Japanese titles when available, medium, Raito's role, client when public, and a factual English description.
+The canonical works list is https://raito.studio/works/ (English) and https://raito.studio/ja/works/ (Japanese). It contains 29 public project records. Each work has its own page in both languages stating the year, medium, client when public, Raito's exact role and how he is credited. Information reviewed 2026-09-11.
+
+- Double Dragon Revive (2025) — Composer / Arranger: https://raito.studio/works/double-dragon-revive/ · 日本語: https://raito.studio/ja/works/double-dragon-revive/
+- RAIDEN III x MIKADO MANIAX (2023) — Arranger: https://raito.studio/works/raiden-iii-mikado-maniax/ · 日本語: https://raito.studio/ja/works/raiden-iii-mikado-maniax/
+- Fate/Grand Order (2021) — Arranger: https://raito.studio/works/fate-grand-order/ · 日本語: https://raito.studio/ja/works/fate-grand-order/
+- SK8 the Infinity (2021) — Composer / Arranger: https://raito.studio/works/sk8-the-infinity/ · 日本語: https://raito.studio/ja/works/sk8-the-infinity/
+- Kingdom DASH!! (2021) — Composer / Sound Effects: https://raito.studio/works/kingdom-dash/ · 日本語: https://raito.studio/ja/works/kingdom-dash/
+- BOFURI: Line Wars! (2020) — Composer / Sound Effects: https://raito.studio/works/bofuri-line-wars/ · 日本語: https://raito.studio/ja/works/bofuri-line-wars/
+- Indivisible (2019) — Sound Effects: https://raito.studio/works/indivisible/ · 日本語: https://raito.studio/ja/works/indivisible/
+- Mr. Osomatsu’s Hesokuri Wars (2019) — Composer / Arranger: https://raito.studio/works/osomatsu-san-hesokuri-wars/ · 日本語: https://raito.studio/ja/works/osomatsu-san-hesokuri-wars/
+- We Never Learn: BOKUBEN (2019) — Composer / Arranger: https://raito.studio/works/bokuben-study/ · 日本語: https://raito.studio/ja/works/bokuben-study/
+- BLAZBLUE CROSS TAG BATTLE (2018–2019) — Arranger: https://raito.studio/works/blazblue-cross-tag-battle/ · 日本語: https://raito.studio/ja/works/blazblue-cross-tag-battle/
+- RXN -Raijin- (2018) — Composer: https://raito.studio/works/rxn-raijin/ · 日本語: https://raito.studio/ja/works/rxn-raijin/
+- The Disastrous Life of Saiki K.: Psi Kick Battle (2018) — Composer: https://raito.studio/works/saiki-k-psi-kick-battle/ · 日本語: https://raito.studio/ja/works/saiki-k-psi-kick-battle/
+- VOEZ (2017) — Arranger: https://raito.studio/works/voez/ · 日本語: https://raito.studio/ja/works/voez/
+- Okinawa no Kowai Hanashi (2016) — Score / Sound Effects / Insert Songs: https://raito.studio/works/okinawa-no-kowai-hanashi/ · 日本語: https://raito.studio/ja/works/okinawa-no-kowai-hanashi/
+- DragonFang (2015) — Composer / Voice Direction: https://raito.studio/works/dragonfang/ · 日本語: https://raito.studio/ja/works/dragonfang/
+- Crayon Shin-chan: Kasukabe Runner!! (2014) — Sound Production: https://raito.studio/works/crayon-shin-chan-kasukabe-runner/ · 日本語: https://raito.studio/ja/works/crayon-shin-chan-kasukabe-runner/
+- Dengeki Bunko: Fighting Climax (2014) — Sound Effects: https://raito.studio/works/dengeki-bunko-fighting-climax/ · 日本語: https://raito.studio/ja/works/dengeki-bunko-fighting-climax/
+- The Legend of Dark Witch / Brave Dungeon (2014–2020) — Composer / Arranger: https://raito.studio/works/legend-of-dark-witch/ · 日本語: https://raito.studio/ja/works/legend-of-dark-witch/
+- UNDER NIGHT IN-BIRTH series (2012–2024) — Composer / Arranger / Sound Effects: https://raito.studio/works/under-night-in-birth/ · 日本語: https://raito.studio/ja/works/under-night-in-birth/
+- Touhou Project arrangement works (2012–2023) — Composer / Arranger: https://raito.studio/works/touhou-project-arrangements/ · 日本語: https://raito.studio/ja/works/touhou-project-arrangements/
+- Arcana Heart 2 (2009) — Remixer: https://raito.studio/works/arcana-heart-2/ · 日本語: https://raito.studio/ja/works/arcana-heart-2/
+- Deathsmiles (2009–2010) — Arranger: https://raito.studio/works/deathsmiles/ · 日本語: https://raito.studio/ja/works/deathsmiles/
+- Cutie Honey THE LIVE (2008) — Remixer: https://raito.studio/works/cutie-honey-the-live/ · 日本語: https://raito.studio/ja/works/cutie-honey-the-live/
+- Lucky☆Star (2007–2008) — Composer / Arranger / Remixer: https://raito.studio/works/lucky-star/ · 日本語: https://raito.studio/ja/works/lucky-star/
+- Higurashi: When They Cry image albums (2006–2007) — Composer / Arranger: https://raito.studio/works/higurashi-image-albums/ · 日本語: https://raito.studio/ja/works/higurashi-image-albums/
+- Ragnarok Battle Offline (2005–2006) — Composer / Arranger: https://raito.studio/works/ragnarok-battle-offline/ · 日本語: https://raito.studio/ja/works/ragnarok-battle-offline/
+- Lamune — opening theme (2005) — Composer: https://raito.studio/works/lamune/ · 日本語: https://raito.studio/ja/works/lamune/
+- MELTY BLOOD series (2003–2021) — Composer / Arranger: https://raito.studio/works/melty-blood/ · 日本語: https://raito.studio/ja/works/melty-blood/
+- GLOVE ON FIGHT (2002) — Composer / Arranger: https://raito.studio/works/glove-on-fight/ · 日本語: https://raito.studio/ja/works/glove-on-fight/
 
 ## Browser tools
 
@@ -55,6 +85,14 @@ The canonical human-readable and machine-readable project list is published at h
 - Audio loop guide: https://raito.studio/guides/audio-loop-seams/ . Japanese: https://raito.studio/ja/guides/audio-loop-seams/ . CARVE Seam checks, zero crossings, marker-based OGG loop tags and sample positions.
 - TALLY introduction: https://raito.studio/tally/ — Japanese text editor and analyzer for character counts, kana-based mora counts, and writing modes. App: https://tally.raito.studio/ . Source: https://github.com/Raito-sound/tally . Text is processed in the browser.
 - CARVE introduction: https://raito.studio/carve/ — Browser wave editor with range editing, fades, normalization, loop seam checks, and WAV/OGG/MP3 export. App: https://carve.raito.studio/ . Source: https://github.com/Raito-sound/carve . Audio is processed locally; OGG/MP3 encoders require a network download.
+
+## External identifiers (same person)
+
+- Wikidata: https://www.wikidata.org/wiki/Q11523677
+- Wikipedia (Japanese): https://ja.wikipedia.org/wiki/%E6%9D%A5%E5%85%8E
+- VGMdb artist: https://vgmdb.net/artist/1585
+- IMDb: https://www.imdb.com/name/nm9311908/
+- Not to be confused with other uses of the name "Raito" (for example the Death Note character). This Raito is the Japanese game composer 来兎 / Masaru Kuba from Okinawa.
 
 ## Contact and official profiles
 
@@ -67,4 +105,4 @@ The canonical human-readable and machine-readable project list is published at h
 
 ## Site relationship
 
-Raito.studio is the English-language website for Raito’s international game and anime work. Lisa-rec.net is the Japanese-language website of Lisa-Rec Inc. for commercial music, sound logos and music for spaces in Japan. Raito is the founder and CEO of Lisa-Rec Inc.; the two websites describe the same person and company relationship.
+Raito.studio is the English-language website for Raito’s international game and anime work. Lisa-rec.net is the Japanese-language website of Lisa-Rec Inc. for commercial music, sound logos and music for spaces in Japan. Raito is the founder and CEO of Lisa-Rec Inc.; the two websites describe the same person and company relationship. All commercial (CM) music and sound logos listed on lisa-rec.net (more than 150 works, 2010–2026) were composed by Raito (来兎 / Masaru Kuba) himself.
