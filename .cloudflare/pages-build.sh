@@ -9,3 +9,4 @@ cp -R assets _site/
 cp -R works _site/
 cp press/index.html press/press.css _site/press/
 cp -R tally carve keys pitch tools guides ja _site/
+for d in $(python3 scripts/build-redirects.py --list-top); do if [ -d "$d" ] && [ ! -e "_site/$d" ]; then cp -R "$d" _site/; fi; done
